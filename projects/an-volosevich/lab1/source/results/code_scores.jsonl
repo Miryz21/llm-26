@@ -1,0 +1,48 @@
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C1_palindrome", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C2_merge_intervals", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C3_int_to_roman", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C4_top_k_words", "repeat": 1, "passed": 5, "total": 5, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C5_decode_string", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C6_longest_valid_parens", "repeat": 1, "passed": 8, "total": 8, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C7_min_window", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C1_palindrome", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C2_merge_intervals", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C4_top_k_words", "repeat": 1, "passed": 5, "total": 5, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C5_decode_string", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C6_longest_valid_parens", "repeat": 1, "passed": 8, "total": 8, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C7_min_window", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C1_palindrome", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C2_merge_intervals", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C3_int_to_roman", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C4_top_k_words", "repeat": 1, "passed": 4, "total": 5, "errors": ["[['the', 'day', 'is', 'sunny', 'the', 'the', 'the', 'sunny', 'is', 'is'], 4]: expected ['the', 'is', 'sunny', 'day'], got ['day', 'is', 'sunny', 'the']"]}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C5_decode_string", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C6_longest_valid_parens", "repeat": 1, "passed": 8, "total": 8, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C7_min_window", "repeat": 1, "passed": 3, "total": 7, "errors": ["['ADOBECODEBANC', 'ABC']: KeyError: 'D'", "['ab', 'b']: KeyError: 'a'", "['acbbaca', 'aba']: KeyError: 'c'"]}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C1_palindrome", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C2_merge_intervals", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C3_int_to_roman", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C4_top_k_words", "repeat": 1, "passed": 2, "total": 5, "errors": ["[['i', 'love', 'leetcode', 'i', 'love', 'coding'], 2]: expected ['i', 'love'], got ['love', 'i']", "[['b', 'a', 'c'], 2]: expected ['a', 'b'], got ['c', 'b']", "[['x', 'y', 'x', 'y', 'z'], 3]: expected ['x', 'y', 'z'], got ['y', 'x', 'z']"]}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C5_decode_string", "repeat": 1, "passed": 1, "total": 6, "errors": ["['3[a]2[bc]']: expected 'aaabcbc', got ''", "['3[a2[c]]']: expected 'accaccacc', got ''", "['2[abc]3[cd]ef']: expected 'abcabccdcdcdef', got 'ef'"]}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C6_longest_valid_parens", "repeat": 1, "passed": 8, "total": 8, "errors": []}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C7_min_window", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C1_palindrome", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C2_merge_intervals", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C3_int_to_roman", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C4_top_k_words", "repeat": 1, "passed": 5, "total": 5, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C5_decode_string", "repeat": 1, "passed": 1, "total": 6, "errors": ["['3[a]2[bc]']: expected 'aaabcbc', got 'abc'", "['3[a2[c]]']: expected 'accaccacc', got 'acac'", "['2[abc]3[cd]ef']: expected 'abcabccdcdcdef', got 'abccdef'"]}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C6_longest_valid_parens", "repeat": 1, "passed": 8, "total": 8, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C7_min_window", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C1_palindrome", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C2_merge_intervals", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C3_int_to_roman", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C4_top_k_words", "repeat": 1, "passed": 5, "total": 5, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C5_decode_string", "repeat": 1, "passed": 6, "total": 6, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C6_longest_valid_parens", "repeat": 1, "passed": 8, "total": 8, "errors": []}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C7_min_window", "repeat": 1, "passed": 7, "total": 7, "errors": []}
+{"model": "qwen3.8-flash-next-reap256", "mode": "A_base", "problem_id": "C8_calculator", "repeat": 1, "passed": 0, "total": 11, "errors": ["load: KeyError: 'calculate'"]}
+{"model": "llama-3.1-8b-instruct", "mode": "A_base", "problem_id": "C8_calculator", "repeat": 1, "passed": 0, "total": 11, "errors": ["['1 + 1']: IndexError: pop from empty list", "['3+2*2']: IndexError: pop from empty list", "[' 14-3/2 ']: IndexError: pop from empty list"]}
+{"model": "llama-3.1-8b-instruct", "mode": "B_tuned", "problem_id": "C8_calculator", "repeat": 1, "passed": 2, "total": 11, "errors": ["[' 14-3/2 ']: expected 13, got 14", "['(1+(4+5+2)-3)+(6+8)']: IndexError: pop from empty list", "['-(2+3)*4']: IndexError: pop from empty list"]}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C3_int_to_roman", "repeat": 1, "passed": 0, "total": 7, "errors": ["load: KeyError: 'int_to_roman'"]}
+{"model": "qwen3.8-flash-next-reap256", "mode": "B_tuned", "problem_id": "C8_calculator", "repeat": 1, "passed": 0, "total": 11, "errors": ["load: KeyError: 'calculate'"]}
+{"model": "ministral-3-8b-instruct", "mode": "A_base", "problem_id": "C8_calculator", "repeat": 1, "passed": 0, "total": 11, "errors": ["['1 + 1']: IndexError: pop from empty list", "['3+2*2']: IndexError: pop from empty list", "[' 14-3/2 ']: IndexError: pop from empty list"]}
+{"model": "ministral-3-8b-instruct", "mode": "B_tuned", "problem_id": "C8_calculator", "repeat": 1, "passed": 3, "total": 11, "errors": ["['(1+(4+5+2)-3)+(6+8)']: IndexError: pop from empty list", "['-(2+3)*4']: IndexError: pop from empty list", "['10 - 2 * -3']: IndexError: pop from empty list"]}
