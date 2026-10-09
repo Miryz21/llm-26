@@ -117,7 +117,9 @@ def main():
               "|---|---|---|---|---|---|---|"]
     for m in models:
         for pid in PROBLEMS:
-            for mode in ("A_base", "B_tuned"):
+            for mode in ("A_base", "B_tuned", "B_long"):
+                if (m, mode, pid) not in groups:
+                    continue
                 st = stats(m, mode, pid)
                 lines.append(f"| {m} | {pid} | {mode} | {st['rate']:.0%} | {st['solved']:.0%} | "
                              f"{st['out_tok']:.0f} | {st['wall_s']:.1f} |")

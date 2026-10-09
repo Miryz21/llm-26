@@ -18,6 +18,7 @@
 | qwen3.8-flash-next-reap256 | C2_merge_intervals | B_tuned | 100% | 100% | 243 | 8.1 |
 | qwen3.8-flash-next-reap256 | C3_int_to_roman | A_base | 100% | 100% | 5167 | 151.1 |
 | qwen3.8-flash-next-reap256 | C3_int_to_roman | B_tuned | 0% | 0% | 4143 | 117.9 |
+| qwen3.8-flash-next-reap256 | C3_int_to_roman | B_long | 100% | 100% | 1109 | 33.6 |
 | qwen3.8-flash-next-reap256 | C4_top_k_words | A_base | 100% | 100% | 176 | 6.3 |
 | qwen3.8-flash-next-reap256 | C4_top_k_words | B_tuned | 100% | 100% | 155 | 5.6 |
 | qwen3.8-flash-next-reap256 | C5_decode_string | A_base | 100% | 100% | 476 | 14.8 |
@@ -28,6 +29,7 @@
 | qwen3.8-flash-next-reap256 | C7_min_window | B_tuned | 100% | 100% | 887 | 26.4 |
 | qwen3.8-flash-next-reap256 | C8_calculator | A_base | 0% | 0% | 16208 | 469.7 |
 | qwen3.8-flash-next-reap256 | C8_calculator | B_tuned | 0% | 0% | 8192 | 236.8 |
+| qwen3.8-flash-next-reap256 | C8_calculator | B_long | 0% | 0% | 32768 | 967.1 |
 | llama-3.1-8b-instruct | C1_palindrome | A_base | 100% | 100% | 46 | 0.4 |
 | llama-3.1-8b-instruct | C1_palindrome | B_tuned | 100% | 100% | 43 | 0.4 |
 | llama-3.1-8b-instruct | C2_merge_intervals | A_base | 100% | 100% | 213 | 1.9 |
