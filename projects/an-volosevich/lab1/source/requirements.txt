@@ -1,0 +1,5 @@
+# Python >= 3.10. run_bench.py / analyze.py / judge.py — только стандартная библиотека.
+# Для графиков и тестов:
+matplotlib>=3.8
+pytest>=8
+# Инференс: llama.cpp llama-server b11524 (CUDA 12.8) — бинарник, см. ../README.md

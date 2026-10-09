@@ -1,0 +1,380 @@
+{
+ "bc056baa": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 1,
+  "ts": "2026-10-09T14:15:32.069333+00:00"
+ },
+ "d5302d59": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 2,
+  "ts": "2026-10-09T14:15:35.394278+00:00"
+ },
+ "bf575002": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 3,
+  "ts": "2026-10-09T14:15:38.557120+00:00"
+ },
+ "fbfd97be": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 1,
+  "ts": "2026-10-09T14:15:38.985257+00:00"
+ },
+ "66b7e084": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 2,
+  "ts": "2026-10-09T14:15:39.439631+00:00"
+ },
+ "26804d5a": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 3,
+  "ts": "2026-10-09T14:15:39.819540+00:00"
+ },
+ "a186b99e": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 1,
+  "ts": "2026-10-09T14:15:41.654088+00:00"
+ },
+ "b8ef35b7": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 2,
+  "ts": "2026-10-09T14:15:49.231311+00:00"
+ },
+ "19188133": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 3,
+  "ts": "2026-10-09T14:15:50.106476+00:00"
+ },
+ "9fc50ff9": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 1,
+  "ts": "2026-10-09T14:15:53.191112+00:00"
+ },
+ "8fad8d1c": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 2,
+  "ts": "2026-10-09T14:15:56.269321+00:00"
+ },
+ "a6150993": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 3,
+  "ts": "2026-10-09T14:15:59.346664+00:00"
+ },
+ "f9e1ae35": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 1,
+  "ts": "2026-10-09T14:15:59.743276+00:00"
+ },
+ "ee1a23a3": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:00.123988+00:00"
+ },
+ "d3fb1f80": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:00.504700+00:00"
+ },
+ "787fd652": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:02.254896+00:00"
+ },
+ "10b5e27c": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:04.000005+00:00"
+ },
+ "ab5ac652": {
+  "model": "llama-3.1-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:05.734765+00:00"
+ },
+ "67e01e8e": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:11.390609+00:00"
+ },
+ "1e425fa8": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:14.078896+00:00"
+ },
+ "b28e23e0": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:16.873046+00:00"
+ },
+ "a111043d": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:17.519271+00:00"
+ },
+ "2b4c74a5": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:18.166246+00:00"
+ },
+ "815ed673": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:18.811212+00:00"
+ },
+ "8f7dbfb1": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:20.167685+00:00"
+ },
+ "8925faf8": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:21.522716+00:00"
+ },
+ "2fefbf53": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:22.879340+00:00"
+ },
+ "f82fdd79": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:25.959840+00:00"
+ },
+ "9b3ce754": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:28.760544+00:00"
+ },
+ "d2bf21aa": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:31.173973+00:00"
+ },
+ "b35694a0": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:31.820567+00:00"
+ },
+ "106821fa": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:32.466774+00:00"
+ },
+ "6b12741b": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:33.112994+00:00"
+ },
+ "1eda4051": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 1,
+  "ts": "2026-10-09T14:16:34.468801+00:00"
+ },
+ "d495b5d1": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 2,
+  "ts": "2026-10-09T14:16:35.822772+00:00"
+ },
+ "2b549db0": {
+  "model": "ministral-3-8b-instruct",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 3,
+  "ts": "2026-10-09T14:16:37.177437+00:00"
+ },
+ "33d99ecf": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 1,
+  "ts": "2026-10-09T14:48:21.547335+00:00"
+ },
+ "f6fd3cf8": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 2,
+  "ts": "2026-10-09T14:51:00.332775+00:00"
+ },
+ "03d66d42": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P1_generation",
+  "repeat": 3,
+  "ts": "2026-10-09T14:51:37.062746+00:00"
+ },
+ "aa284b71": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 1,
+  "ts": "2026-10-09T14:51:45.115284+00:00"
+ },
+ "820afe56": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 2,
+  "ts": "2026-10-09T14:51:56.287223+00:00"
+ },
+ "d74f1ed6": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P2_classification",
+  "repeat": 3,
+  "ts": "2026-10-09T14:52:07.952662+00:00"
+ },
+ "58aef33e": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 1,
+  "ts": "2026-10-09T14:52:15.748894+00:00"
+ },
+ "5ed709b4": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 2,
+  "ts": "2026-10-09T14:52:23.212549+00:00"
+ },
+ "0e35da41": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "A_base",
+  "prompt_id": "P3_extraction",
+  "repeat": 3,
+  "ts": "2026-10-09T14:52:32.345022+00:00"
+ },
+ "7e1238b5": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 1,
+  "ts": "2026-10-09T14:52:46.629772+00:00"
+ },
+ "ff0974c5": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 2,
+  "ts": "2026-10-09T14:53:02.927505+00:00"
+ },
+ "cafac905": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P1_generation",
+  "repeat": 3,
+  "ts": "2026-10-09T14:53:34.560596+00:00"
+ },
+ "77a16f35": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 1,
+  "ts": "2026-10-09T14:53:44.280805+00:00"
+ },
+ "8b7804a4": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 2,
+  "ts": "2026-10-09T14:53:53.840022+00:00"
+ },
+ "75590c57": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P2_classification",
+  "repeat": 3,
+  "ts": "2026-10-09T14:54:03.233436+00:00"
+ },
+ "b569d57c": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 1,
+  "ts": "2026-10-09T14:54:12.311329+00:00"
+ },
+ "d26d9f77": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 2,
+  "ts": "2026-10-09T14:54:21.422431+00:00"
+ },
+ "c38dccc7": {
+  "model": "qwen3.8-flash-next-reap256",
+  "mode": "B_tuned",
+  "prompt_id": "P3_extraction",
+  "repeat": 3,
+  "ts": "2026-10-09T14:54:30.275874+00:00"
+ }
+}
