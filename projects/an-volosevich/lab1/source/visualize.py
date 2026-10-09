@@ -5,8 +5,8 @@
   latency_breakdown.png — из чего складывается время ответа: prefill и генерация по задачам
   code_heatmap.png      — задачи по программированию: пройденные тесты по каждой задаче и режиму
   speed.png             — скорость генерации и обработки промпта (две панели, у каждой своя шкала)
-  stability.png         — похожесть ответов между повторами, A -> B
-  out_tokens.png        — длина ответа в токенах, A -> B
+  tokens_breakdown.png  — длина ответа: токены ответа и рассуждения по задачам и режимам
+  stability_heatmap.png — похожесть ответов между повторами и число уникальных ответов
 """
 import difflib
 import itertools
@@ -100,44 +100,6 @@ def heatmap(ax, values, labels, row_names, col_names):
     ax.set_yticks([y - 0.5 for y in range(1, len(row_names))], minor=True)
     ax.grid(which="minor", color=SURFACE, linewidth=2)
     ax.tick_params(which="minor", length=0)
-
-
-def dumbbell(name, title_text, subtitle, rows, xlim=None, digits=2):
-    """rows: [(model, prompt_id, a, b)]. Строки сгруппированы по модели."""
-    rows = [r for r in rows if not (math.isnan(r[2]) and math.isnan(r[3]))]
-    if not rows:
-        return
-    ys, y, group_y = [], 0, []
-    for model in dict.fromkeys(r[0] for r in rows):
-        group_y.append((y, model))
-        y += 1
-        for r in (r for r in rows if r[0] == model):
-            ys.append((y, r))
-            y += 1
-    fig, ax = plt.subplots(figsize=(8.6, 0.36 * y + 1.6))
-    for yy, (_, pid, a, b) in ys:
-        if not (math.isnan(a) or math.isnan(b)):
-            ax.plot([a, b], [yy, yy], color=MUTED, lw=2, alpha=0.5, solid_capstyle="round", zorder=1)
-        # Небольшой вертикальный сдвиг, чтобы совпадающие A и B не перекрывали друг друга.
-        for (_, _, color, marker), v, dy in zip(MODES, (a, b), (-0.13, 0.13)):
-            if not math.isnan(v):
-                ax.scatter(v, yy + dy, s=60, color=color, marker=marker, edgecolors=SURFACE,
-                           linewidths=2, zorder=3)
-        ax.annotate(f"{fmt(a, digits)} → {fmt(b, digits)}", xy=(1.01, yy), xycoords=("axes fraction", "data"),
-                    va="center", fontsize=9, color=INK2)
-    ax.set_yticks([yy for yy, _ in ys], [PROMPT_RU.get(r[1], r[1]) for _, r in ys])
-    for gy, model in group_y:
-        ax.annotate(SHORT.get(model, model), xy=(0, gy), xycoords=("figure fraction", "data"), xytext=(8, 0),
-                    textcoords="offset points", va="center", fontweight="bold", color=INK)
-    ax.set_ylim(y - 0.4, -0.6)
-    if xlim:
-        ax.set_xlim(*xlim)
-    ax.tick_params(axis="y", length=0)
-    title(ax, title_text, subtitle)
-    handles = [Line2D([], [], marker=m, color=c, linestyle="", markersize=8, markeredgecolor=SURFACE,
-                      label=lab) for _, lab, c, m in MODES]
-    ax.legend(handles=handles, loc="lower left", bbox_to_anchor=(0, -0.02 - 1.2 / y), ncol=2, frameon=False)
-    save(fig, name)
 
 
 def quality_table(runs, judge_scores, code_scores):
@@ -267,6 +229,69 @@ def code_heatmap(code_scores, models):
     save(fig, "code_heatmap.png")
 
 
+def tokens_breakdown(runs, models):
+    """Токены рассуждения оцениваются по доле символов рассуждения в ответе модели."""
+    rows = [(p, mode) for p in analyze.SCORERS for mode in ("A_base", "B_tuned")]
+    labels = [f"{PROMPT_RU[p]} · {MODE_SHORT[mode]}" for p, mode in rows]
+    groups = defaultdict(list)
+    for r in runs:
+        groups[(r["model"], r["prompt_id"], r["mode"])].append(r)
+
+    def split(r):
+        total = r["usage"].get("completion_tokens", 0)
+        chars = len(r["reasoning"]) + len(r["content"])
+        reasoning = total * len(r["reasoning"]) / chars if chars else 0
+        return total - reasoning, reasoning
+
+    fig, axes = plt.subplots(1, len(models), figsize=(13, 0.42 * len(rows) + 1.8), sharey=True)
+    for ax, m in zip(axes, models):
+        parts = [[split(r) for r in groups[(m, p, mode)]] for p, mode in rows]
+        ans = [analyze.mean(a for a, _ in ps) for ps in parts]
+        rea = [analyze.mean(b for _, b in ps) for ps in parts]
+        ax.set_axisbelow(True)
+        ax.barh(range(len(rows)), ans, height=0.55, color=SERIES[0])
+        ax.barh(range(len(rows)), rea, left=ans, height=0.55, color=SERIES[1])
+        for i, (a, b) in enumerate(zip(ans, rea)):
+            ax.annotate(f"{a + b:.0f}", xy=(a + b, i), xytext=(4, 0), textcoords="offset points",
+                        va="center", fontsize=8, color=INK2)
+        ax.set_xlim(0, max(a + b for a, b in zip(ans, rea)) * 1.2)
+        ax.set_title(SHORT.get(m, m), fontsize=10)
+        ax.set_xlabel("токены (шкала своя у каждой модели)", fontsize=8, color=MUTED)
+        ax.tick_params(axis="y", length=0)
+    axes[0].set_yticks(range(len(rows)), labels)
+    axes[0].invert_yaxis()
+    fig.legend(handles=[Patch(color=SERIES[0], label="ответ"), Patch(color=SERIES[1], label="рассуждение (оценка)")],
+               loc="upper right", ncol=2, frameon=False)
+    fig.suptitle("Длина ответа, токенов (среднее по 3 повторам)", x=0.01, ha="left", fontweight="bold", color=INK)
+    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    save(fig, "tokens_breakdown.png")
+
+
+def stability_heatmap(runs, models):
+    groups = defaultdict(list)
+    for r in runs:
+        groups[(r["model"], r["prompt_id"], r["mode"])].append(analyze.strip_think(r["content"]))
+    keys = [(m, mode) for m in models for mode in ("A_base", "B_tuned")]
+    values, labels = [], []
+    for m, mode in keys:
+        row_v, row_l = [], []
+        for p in analyze.SCORERS:
+            texts = groups[(m, p, mode)]
+            sims = [difflib.SequenceMatcher(None, a, b).ratio() for a, b in itertools.combinations(texts, 2)]
+            sim = analyze.mean(sims) if sims else float("nan")
+            row_v.append(sim)
+            row_l.append(f"{sim:.2f}\n{len(set(texts))} из {len(texts)}")
+        values.append(row_v)
+        labels.append(row_l)
+    fig, ax = plt.subplots(figsize=(7.5, 0.6 * len(keys) + 1.8))
+    heatmap(ax, values, labels, [f"{SHORT.get(m, m)} · {MODE_SHORT[mode]}" for m, mode in keys],
+            [PROMPT_RU[p] for p in analyze.SCORERS])
+    ax.set_title("Стабильность между повторами\n\n", loc="left")
+    ax.text(0, 1.12, "Похожесть ответов (1 = идентичны) и число уникальных ответов из 3",
+            transform=ax.transAxes, fontsize=9, color=MUTED)
+    save(fig, "stability_heatmap.png")
+
+
 def speed(runs, models):
     per_model = defaultdict(list)
     for r in runs:
@@ -296,20 +321,6 @@ def main():
     code_runs = load_jsonl("code_runs.jsonl")
     code_scores = load_jsonl("code_scores.jsonl")
     judge_scores = load_scores()
-    groups = defaultdict(list)
-    for r in runs:
-        groups[(r["model"], r["prompt_id"], r["mode"])].append(r)
-    models = list(dict.fromkeys(r["model"] for r in runs))
-
-    def metric(fn):
-        return [(m, p, fn(groups.get((m, p, "A_base"), [])), fn(groups.get((m, p, "B_tuned"), [])))
-                for m in models for p in analyze.SCORERS]
-
-    def similarity(rs):
-        texts = [analyze.strip_think(r["content"]) for r in rs]
-        sims = [difflib.SequenceMatcher(None, a, b).ratio() for a, b in itertools.combinations(texts, 2)]
-        return analyze.mean(sims) if sims else float("nan")
-
     models, cols, table = quality_table(runs, judge_scores, code_scores)
     quality_matrix(models, cols, table)
     speed_quality(runs, models, table)
@@ -317,10 +328,8 @@ def main():
     if code_scores:
         code_heatmap(code_scores, models)
     speed(runs, models)
-    dumbbell("stability.png", "Стабильность ответов между повторами",
-             "Средняя попарная похожесть текстов (difflib), 1 = идентичны", metric(similarity), (0, 1.02))
-    dumbbell("out_tokens.png", "Длина ответа", "completion_tokens (у Qwen включая рассуждение), среднее",
-             metric(lambda rs: analyze.mean(r["usage"].get("completion_tokens") for r in rs)), digits=0)
+    tokens_breakdown(runs, models)
+    stability_heatmap(runs, models)
 
 
 if __name__ == "__main__":
