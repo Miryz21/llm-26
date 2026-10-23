@@ -4,13 +4,12 @@
 корпус англоязычный, а BM25 и англоязычные эмбеддинги не сопоставляют русские слова с английскими.
 """
 import functools
-import json
 import re
-import urllib.request
 
 from qdrant_client import QdrantClient, models
 
 from config import LLM_URL, IndexConfig
+from context_budget import post
 from encoders import bm25_query, dense_query
 from load_to_vector_store import collection_name
 
@@ -42,10 +41,8 @@ def translate_query(query: str, url: str = LLM_URL) -> str:
     for ru, en in TRANSLATE_EXAMPLES:
         messages += [{"role": "user", "content": TRANSLATE_REQUEST.format(ru)}, {"role": "assistant", "content": en}]
     messages.append({"role": "user", "content": TRANSLATE_REQUEST.format(query)})
-    body = json.dumps({"messages": messages, "temperature": 0, "max_tokens": 200, "cache_prompt": False}).encode()
-    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=120) as resp:
-        text = json.load(resp)["choices"][0]["message"]["content"]
+    resp = post(url, {"messages": messages, "temperature": 0, "max_tokens": 200, "cache_prompt": False}, timeout=120)
+    text = resp["choices"][0]["message"]["content"]
     return re.sub(r"[*_`]+|</?query>", "", text).strip().strip('"«»')  # модель иногда выделяет термины markdown
 
 

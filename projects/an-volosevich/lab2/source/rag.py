@@ -5,15 +5,19 @@ LLM — Ministral-3-8B-Instruct из лабораторной №1, поднят
     python rag.py "вопрос"          — один ответ в терминал;
     python rag.py                   — интерактивный диалог;
     python rag.py --serve 8000      — HTTP-сервис: POST /ask {"question": "..."} → JSON.
+
+Перед вызовом LLM промпт проверяется на размер окна модели (context_budget.fit): если фрагменты
+вместе с ответом не помещаются, менее релевантные сжимаются под вопрос или отбрасываются.
 """
 import argparse
 import json
 import re
+import sys
 import time
-import urllib.request
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
 from config import LLM_URL, TRANSLATE_QUERY, IndexConfig, add_index_args, index_config_from_args
+from context_budget import LLMError, fit, post
 from encoders import terms
 from load_to_vector_store import client, load
 from retriever import search, translate_query
@@ -38,17 +42,15 @@ def build_prompt(question: str, contexts: list[dict]) -> list[dict]:
     blocks = []
     for i, c in enumerate(contexts, 1):
         pages = ", ".join(map(str, c["pages"]))
-        text = PAPER_REFS.sub("", c["text"])
-        blocks.append(f"[{i}] {c['paper']} — {c['section'] or 'начало статьи'} (стр. {pages})\n{text}")
+        text = PAPER_REFS.sub("", c.get("prompt_text", c["text"]))
+        mark = ", сжато под вопрос" if "prompt_text" in c else ""
+        blocks.append(f"[{i}] {c['paper']} — {c['section'] or 'начало статьи'} (стр. {pages}{mark})\n{text}")
     user = "Контекст:\n\n" + "\n\n".join(blocks) + f"\n\nВопрос: {question}"
     return [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]
 
 
 def call_llm(messages: list[dict], url: str = LLM_URL) -> dict:
-    body = json.dumps({"messages": messages, **GENERATION}).encode()
-    req = urllib.request.Request(url, data=body, headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=600) as resp:
-        return json.load(resp)
+    return post(url, {"messages": messages, **GENERATION})
 
 
 def snippet(text: str, query: str, limit: int = 240) -> str:
@@ -67,12 +69,15 @@ def answer(question: str, cfg: IndexConfig, top_n: int = 5, ef: int = 64, llm_ur
            qc=None, translate: bool = TRANSLATE_QUERY) -> dict:
     qc = qc or client()
     t0 = time.perf_counter()
-    query = translate_query(question) if translate else question
+    query = translate_query(question, llm_url) if translate else question
     contexts = search(qc, cfg, query, top_n, ef=ef)
     t1 = time.perf_counter()
-    resp = call_llm(build_prompt(question, contexts), llm_url)
+    contexts, budget = fit(question, contexts, build_prompt, llm_url, GENERATION["max_tokens"], focus=query)
     t2 = time.perf_counter()
-    text = resp["choices"][0]["message"]["content"].strip()
+    resp = call_llm(build_prompt(question, contexts), llm_url)
+    t3 = time.perf_counter()
+    choice = resp["choices"][0]
+    text = choice["message"]["content"].strip()
 
     refs = re.findall(r"\[(\d+(?:\s*[,;–-]\s*\d+)*)\]", text)  # [2], [2, 4], [2–3]
     cited = sorted({int(n) for ref in refs for n in re.findall(r"\d+", ref) if 1 <= int(n) <= len(contexts)})
@@ -93,7 +98,9 @@ def answer(question: str, cfg: IndexConfig, top_n: int = 5, ef: int = 64, llm_ur
         "citations": citations,
         "retrieved": [{"paper": c["paper"], "arxiv_id": c["arxiv_id"], "pages": c["pages"],
                        "section": c["section"], "score": round(c["score"], 4)} for c in contexts],
-        "timings": {"retrieval_s": round(t1 - t0, 3), "llm_s": round(t2 - t1, 2)},
+        "context": budget,
+        "truncated": choice.get("finish_reason") == "length",
+        "timings": {"retrieval_s": round(t1 - t0, 3), "budget_s": round(t2 - t1, 3), "llm_s": round(t3 - t2, 2)},
         "usage": resp.get("usage", {}),
     }
 
@@ -106,10 +113,17 @@ def render(result: dict) -> str:
         lines.append(f"      «{c['snippet']}»")
     if not result["citations"]:
         lines.append("  — (модель не сослалась ни на один фрагмент)")
-    t = result["timings"]
+    t, ctx = result["timings"], result["context"]
+    if result["truncated"]:
+        lines.append("\n⚠ ответ обрезан: модель исчерпала лимит токенов ответа или окна")
+    if ctx["summarized"] or ctx["dropped"]:
+        lines.append(f"\nконтекст не помещался в окно {ctx['n_ctx']} ток.: сжато фрагментов — "
+                     f"{len(ctx['summarized'])} ({', '.join(map(str, ctx['summarized'])) or '—'}), "
+                     f"отброшено — {ctx['dropped']}")
     if result["search_query"] != result["question"]:
         lines.append(f"\nпоисковый запрос: {result['search_query']}")
-    lines.append(f"поиск {t['retrieval_s']} с, генерация {t['llm_s']} с")
+    lines.append(f"промпт {ctx['prompt_tokens']} из {ctx['budget']} ток. бюджета; "
+                 f"поиск {t['retrieval_s']} с, генерация {t['llm_s']} с")
     return "\n".join(lines)
 
 
@@ -126,10 +140,14 @@ def serve(port: int, cfg: IndexConfig, top_n: int, ef: int, llm_url: str, transl
             if not question:
                 self.send_error(400, "question is required")
                 return
-            result = answer(question, cfg, body.get("top_n", top_n), ef, llm_url, qc, translate)
-            result.pop("contexts")
+            try:
+                result = answer(question, cfg, body.get("top_n", top_n), ef, llm_url, qc, translate)
+                result.pop("contexts")
+                status = 200
+            except LLMError as e:
+                result, status = {"error": str(e)}, 502
             data = json.dumps(result, ensure_ascii=False).encode()
-            self.send_response(200)
+            self.send_response(status)
             self.send_header("Content-Type", "application/json; charset=utf-8")
             self.send_header("Content-Length", str(len(data)))
             self.end_headers()
@@ -159,7 +177,13 @@ def main():
         return
     questions = [args.question] if args.question else iter(lambda: input("\nВопрос> ").strip(), "")
     for q in questions:
-        result = answer(q, cfg, args.top_n, args.ef, args.llm_url, translate=args.translate)
+        try:
+            result = answer(q, cfg, args.top_n, args.ef, args.llm_url, translate=args.translate)
+        except LLMError as e:
+            print(f"ошибка: {e}", file=sys.stderr)
+            if args.question:
+                sys.exit(1)
+            continue
         if args.json:
             result.pop("contexts")
             print(json.dumps(result, ensure_ascii=False, indent=1))

@@ -69,6 +69,9 @@ QDRANT_URL = os.environ.get("QDRANT_URL", "http://127.0.0.1:6333")
 LLM_URL = os.environ.get("LLM_URL", "http://127.0.0.1:8080/v1/chat/completions")
 # Перевод запроса на английский перед поиском (лучший результат на шаге 5).
 TRANSLATE_QUERY = os.environ.get("RAG_TRANSLATE", "1") == "1"
+# Размер контекста LLM в токенах. По умолчанию берётся у llama-server (/props); переменная нужна,
+# если сервер его не сообщает, или чтобы проверить сжатие контекста на меньшем окне.
+N_CTX = int(os.environ["RAG_N_CTX"]) if os.environ.get("RAG_N_CTX") else None
 
 
 @dataclass(frozen=True)
