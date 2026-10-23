@@ -7,7 +7,7 @@
   "cited": 1.0,
   "cite_source": 1,
   "cite_evidence": 0.9444444444444444,
-  "llm_s": 2.147222222222222,
+  "llm_s": 2.165,
   "tokens_in": 2285.6111111111113,
   "refusal_rate": 1.0
  },
@@ -18,7 +18,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.29,
+   "llm_s": 2.31,
    "tokens_in": 2271
   },
   {
@@ -27,7 +27,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.74,
+   "llm_s": 2.76,
    "tokens_in": 2660
   },
   {
@@ -36,7 +36,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.16,
+   "llm_s": 1.18,
    "tokens_in": 2560
   },
   {
@@ -54,7 +54,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.28,
+   "llm_s": 2.31,
    "tokens_in": 2623
   },
   {
@@ -63,7 +63,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.24,
+   "llm_s": 2.27,
    "tokens_in": 2654
   },
   {
@@ -72,7 +72,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.65,
+   "llm_s": 2.68,
    "tokens_in": 3017
   },
   {
@@ -81,7 +81,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.22,
+   "llm_s": 1.24,
    "tokens_in": 2402
   },
   {
@@ -90,7 +90,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.94,
+   "llm_s": 2.96,
    "tokens_in": 2199
   },
   {
@@ -108,7 +108,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.97,
+   "llm_s": 3.0,
    "tokens_in": 2013
   },
   {
@@ -117,7 +117,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.0,
+   "llm_s": 2.01,
    "tokens_in": 2450
   },
   {
@@ -126,7 +126,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.05,
+   "llm_s": 2.06,
    "tokens_in": 1619
   },
   {
@@ -135,7 +135,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.64,
+   "llm_s": 1.65,
    "tokens_in": 1476
   },
   {
@@ -144,7 +144,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.43,
+   "llm_s": 1.45,
    "tokens_in": 2097
   },
   {
@@ -153,7 +153,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.64,
+   "llm_s": 2.66,
    "tokens_in": 2118
   },
   {
@@ -162,7 +162,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.92,
+   "llm_s": 2.93,
    "tokens_in": 1809
   },
   {
@@ -171,7 +171,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 0.0,
-   "llm_s": 3.13,
+   "llm_s": 3.15,
    "tokens_in": 1935
   }
  ]

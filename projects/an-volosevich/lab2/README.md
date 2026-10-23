@@ -29,7 +29,7 @@ RAG-агент отвечает на вопросы о четырёх стать
   Итог с ними не хуже собственной реализации из первой версии: на русских вопросах R@5 0.917 против
   0.889.
 - **Ответы**: все 18 со ссылками на нужную статью, в 17 из 18 процитирован фрагмент с
-  доказательством; оба вопроса вне корпуса получили отказ. Ответ — за ~2.1 с на RTX 5070.
+  доказательством; оба вопроса вне корпуса получили отказ. Ответ — за ~2.2 с на RTX 5070.
 - **HNSW и квантование int8** на 132 векторах не отличаются от точного перебора.
 
 ![Качество retrieval по конфигурациям](source/results/plots/retrieval.png)
@@ -103,6 +103,72 @@ python build_index.py --splitter markdown --chunk-size 800 --overlap 100 --heade
 чанки, `dense.npy`, BM25-веса и `config.json` с параметрами и хэшем корпуса. Повторный запуск
 ничего не пересчитывает, пока не изменились параметры или Markdown.
 
+#### Как чанкер режет текст
+
+[`show_chunks.py`](source/show_chunks.py) показывает разбиение любого раздела корпуса или своего
+текста при любых параметрах: границы чанков, страницы, длину в токенах и перекрытие с предыдущим
+чанком. В терминале чанки чередуют цвета, а перекрытие подсвечено жёлтым фоном.
+
+```bash
+python show_chunks.py --paper Direct3D --section "4.1" --chunk-size 200 --overlap 40
+python show_chunks.py --paper ViewCrafter --splitter recursive --chunk-size 400 --overlap 60
+python show_chunks.py --file notes.md --chunk-size 300      # свой Markdown; «--file -» — из stdin
+python show_chunks.py --section "4.1" --format markdown     # таблица, как ниже
+```
+
+Ниже — раздел «4.1 Implementation Details» статьи Direct3D (страницы 7–8, ~570 токенов: абзац про
+D3D-VAE, подпись к рисунку, таблица user study и абзац про D3D-DiT) при трёх размерах чанка.
+Таблицы сгенерированы командой `show_chunks.py --format markdown`.
+
+<details>
+<summary><b>chunk_size 200, overlap 40</b> — 4 чанка</summary>
+
+| # | Стр. | Токенов | Перекрытие | Начало чанка | Конец чанка |
+|---|---|---|---|---|---|
+| 1 | 7 | 187 | — | **D3D-VAE.** Our D3D-VAE takes as input 81,920 point clouds with… | …consists of 5 linear layers with hidden dimension 64. |
+| 2 | 7 | 103 | 19 ток.: «The geometric mapping network consists…» | The geometric mapping network consists of 5 linear layers with hidden… | …the D3D-VAE model on NVIDIA A100 (80G) for 100K steps. |
+| 3 | 8 | 164 | — | Figure 5: Qualitative comparisons of the meshes generated from text.… | …\|Consistency\|1.19\|1.28\|2.32\|2.66\|**4.35**\| |
+| 4 | 8 | 135 | — | **D3D-DiT.** Our diffusion model adopts the network configuration of… | …50 steps of DDIM [48] with the guidance scale set to 7.5. |
+
+- Абзац про D3D-VAE (~270 токенов) не помещается в чанк и режется внутри: сначала по абзацам, потом
+  по `". "`. Граница проходит между предложениями.
+- Перекрытие есть только у чанка 2 — это последнее предложение чанка 1. Чанки 3 и 4 начинаются с
+  нового абзаца без перекрытия: абзац длиннее бюджета `overlap`, а LangChain переносит только целые
+  куски.
+- Точка остаётся в конце предложения благодаря `keep_separator="end"`. По умолчанию
+  (`"start"`) LangChain переносит разделитель `". "` в начало следующего куска, и чанк 2 начинался
+  с `". The geometric…"`; так начинались 54 из 263 чанков при 200 токенах.
+
+</details>
+
+<details>
+<summary><b>chunk_size 400, overlap 60</b> — 2 чанка (база экспериментов)</summary>
+
+| # | Стр. | Токенов | Перекрытие | Начало чанка | Конец чанка |
+|---|---|---|---|---|---|
+| 1 | 7–8 | 338 | — | **D3D-VAE.** Our D3D-VAE takes as input 81,920 point clouds with… | …The higher the score, ranging from 1 to 5, the better. |
+| 2 | 8 | 258 | 26 ток.: «Table 1: User study on the quality of…» | Table 1: User study on the quality of meshes. The higher the score,… | …50 steps of DDIM [48] with the guidance scale set to 7.5. |
+
+- Чанк 1 захватывает D3D-VAE, подпись к рисунку и подпись к таблице и переходит со страницы 7 на 8.
+  У него `pages: [7, 8]`, и в цитате будут обе страницы.
+- Чанк 2 начинается с подписи «Table 1…»: этот короткий абзац (26 токенов) поместился в бюджет
+  перекрытия и повторён в обоих чанках. Таблица остаётся рядом со своей подписью.
+
+</details>
+
+<details>
+<summary><b>chunk_size 800, overlap 100</b> — 1 чанк (итоговая конфигурация)</summary>
+
+| # | Стр. | Токенов | Перекрытие | Начало чанка | Конец чанка |
+|---|---|---|---|---|---|
+| 1 | 7–8 | 570 | — | **D3D-VAE.** Our D3D-VAE takes as input 81,920 point clouds with… | …50 steps of DDIM [48] with the guidance scale set to 7.5. |
+
+- Весь раздел (570 токенов) — один чанк. Гиперпараметры D3D-VAE и D3D-DiT, таблица и фраза
+  «50 steps of DDIM» оказываются в одном фрагменте, и на вопрос про инференс LLM получает весь
+  контекст сразу.
+
+</details>
+
 ### 4. Qdrant — [`load_to_vector_store.py`](source/load_to_vector_store.py)
 
 Коллекция `papers-<index_id>`: dense-вектор `dense` (cosine, HNSW `m=16`, `ef_construct=100`,
@@ -130,11 +196,11 @@ k = 5 и 10, каждая конфигурация проверяется на �
 | только sparse BM25 | 0.324 | 0.257 | 0.861 | 0.727 |
 | dense multilingual-e5-large | 0.759 | 0.722 | 0.787 | 0.615 |
 | dense e5-large-v2 | 0.444 | 0.265 | 0.741 | 0.609 |
-| dense bge-base-en | 0.435 | 0.257 | 0.824 | 0.663 |
-| RRF k = 60 вместо 2 | 0.509 | 0.335 | 0.889 | 0.833 |
-| recursive-сплиттер | 0.769 | 0.560 | **0.944** | 0.884 |
+| dense bge-base-en | 0.435 | 0.256 | 0.824 | 0.666 |
+| RRF k = 60 вместо 2 | 0.509 | 0.344 | 0.889 | 0.833 |
+| recursive-сплиттер | 0.796 | 0.560 | **0.944** | 0.884 |
 | без заголовков в чанке | 0.620 | 0.381 | 0.796 | 0.701 |
-| чанк 200 / overlap 30 | 0.657 | 0.421 | 0.750 | 0.727 |
+| чанк 200 / overlap 30 | 0.648 | 0.495 | 0.722 | 0.733 |
 | чанк 800 / overlap 100 | 0.778 | 0.555 | 0.889 | **0.897** |
 | чанк 400 без overlap | 0.713 | 0.490 | 0.889 | 0.840 |
 | база + перевод запроса | **0.917** | 0.806 | — | — |
@@ -163,7 +229,7 @@ $ python rag.py "Какой сэмплер, сколько шагов и как�
       «During inference, we apply 50 steps of DDIM [48] with the guidance scale set to 7.5.»
 
 поисковый запрос: Which sampler, how many steps, and what guidance scale are used during Direct3D inference?
-поиск 4.155 с, генерация 1.0 с
+поиск 5.942 с, генерация 1.0 с
 ```
 
 «поиск» в разовом запуске включает загрузку bge-m3 и перевод; в работающем сервисе — ~0.25 с на
@@ -182,7 +248,7 @@ $ python rag.py "Какой сэмплер, сколько шагов и как�
 | цитаты из нужной статьи | 1.00 | 1.00 |
 | среди цитат есть фрагмент-доказательство | 0.78 | 0.94 |
 | отказ на 2 вопросах вне корпуса | 2/2 | 2/2 |
-| токенов промпта / генерация | 1478 / 1.9 с | 2286 / 2.1 с |
+| токенов промпта / генерация | 1478 / 1.9 с | 2286 / 2.2 с |
 
 ## Выводы
 
@@ -216,7 +282,9 @@ $ python rag.py "Какой сэмплер, сколько шагов и как�
      контекста;
    - **`add_start_index` в LangChain возвращал −1** после склейки кусков, и чанки получали
      неверные страницы (DDIM — 7 вместо 8); положение чанка теперь ищется по его первой и последней
-     строке.
+     строке;
+   - **точка уезжала в начало следующего чанка**: по умолчанию `RecursiveCharacterTextSplitter`
+     приклеивает разделитель `". "` к следующему куску; исправлено `keep_separator="end"`.
 6. **Оставшиеся ошибки**:
    - retrieval: чанк с «DynamiCrafter» на 9-м месте при top-5;
    - перекос выдачи в межстатейном вопросе: 4 из 5 фрагментов из одной статьи;
@@ -283,6 +351,7 @@ lab2/
     ├── evaluate.py            метрики retrieval по конфигурациям
     ├── evaluate_qa.py         качество ответов
     ├── plot_results.py        график
+    ├── show_chunks.py         просмотр разбиения на чанки
     ├── questions.json         18 вопросов с эталоном
     ├── requirements.txt
     ├── data/markdown/         нормализованный корпус (PDF скачиваются в data/pdf/)

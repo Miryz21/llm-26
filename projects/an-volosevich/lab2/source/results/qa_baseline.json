@@ -8,7 +8,7 @@
   "cite_source": 1,
   "cite_evidence": 0.7777777777777778,
   "llm_s": 1.8694444444444445,
-  "tokens_in": 1478.3333333333333,
+  "tokens_in": 1478.2777777777778,
   "refusal_rate": 1.0
  },
  "questions": [
@@ -18,8 +18,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.0,
-   "tokens_in": 1445
+   "llm_s": 1.97,
+   "tokens_in": 1444
   },
   {
    "id": "Q02",
@@ -27,7 +27,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.16,
+   "llm_s": 2.17,
    "tokens_in": 1765
   },
   {
@@ -99,7 +99,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.0,
+   "llm_s": 1.01,
    "tokens_in": 1188
   },
   {
@@ -162,7 +162,7 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 0.0,
-   "llm_s": 3.24,
+   "llm_s": 3.25,
    "tokens_in": 1672
   },
   {

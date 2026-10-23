@@ -24,7 +24,9 @@ from config import MARKDOWN_DIR, PAPERS, TOKENIZER, IndexConfig
 PAGE_MARK = re.compile(r"<!-- page: (\d+) -->")
 HEADING = re.compile(r"^(#{1,3})\s+(.*)$", re.MULTILINE)
 HEADERS = [("#", "h1"), ("##", "h2"), ("###", "h3")]
-# MarkdownHeaderTextSplitter склеивает абзацы через «  \n», поэтому этот разделитель идёт первым.
+# MarkdownHeaderTextSplitter склеивает абзацы через «  \n», поэтому этот разделитель идёт сразу
+# после пустой строки. keep_separator="end" оставляет «. » в конце предложения: по умолчанию («start»)
+# точка уезжала в начало следующего куска, и чанк начинался с «. The geometric…».
 SEPARATORS = ["\n\n", "  \n", "\n", ". ", " ", ""]
 
 
@@ -39,7 +41,11 @@ def count_tokens(text: str) -> int:
 
 def read_markdown(path: str) -> tuple[dict, str]:
     with open(path, encoding="utf-8") as f:
-        text = f.read()
+        return parse_markdown(f.read())
+
+
+def parse_markdown(text: str) -> tuple[dict, str]:
+    """YAML-шапка (простые пары «ключ: значение») и тело документа."""
     _, front, body = text.split("---\n", 2)
     meta = {}
     for line in front.strip().splitlines():
@@ -51,7 +57,7 @@ def read_markdown(path: str) -> tuple[dict, str]:
 def window_splitter(cfg: IndexConfig) -> RecursiveCharacterTextSplitter:
     return RecursiveCharacterTextSplitter.from_huggingface_tokenizer(
         tokenizer(), chunk_size=cfg.chunk_size, chunk_overlap=cfg.overlap,
-        separators=SEPARATORS, strip_whitespace=True)
+        separators=SEPARATORS, keep_separator="end", strip_whitespace=True)
 
 
 def pages_of(text: str, start: int, end: int, first_page: int) -> list[int]:
@@ -105,6 +111,11 @@ def sections(body: str) -> list[tuple[str, str, int]]:
 
 def chunk_paper(paper: dict, cfg: IndexConfig) -> list[dict]:
     meta, body = read_markdown(os.path.join(MARKDOWN_DIR, f"{paper['arxiv_id']}.md"))
+    return chunk_markdown(meta, body, cfg)
+
+
+def chunk_markdown(meta: dict, body: str, cfg: IndexConfig) -> list[dict]:
+    """Чанки тела Markdown-документа; meta — поля YAML-шапки (arxiv_id, short, title, url)."""
     pieces = []
     if cfg.splitter == "markdown":
         for name, text, first_page in sections(body):
@@ -123,8 +134,8 @@ def chunk_paper(paper: dict, cfg: IndexConfig) -> list[dict]:
     for section, text, pages in pieces:
         header = f"{meta['short']} | {section}" if section else meta["short"]
         chunks.append({
-            "id": f"{paper['arxiv_id']}:{len(chunks):04d}",
-            "arxiv_id": paper["arxiv_id"],
+            "id": f"{meta['arxiv_id']}:{len(chunks):04d}",
+            "arxiv_id": meta["arxiv_id"],
             "paper": meta["short"],
             "title": meta["title"],
             "url": meta["url"],
