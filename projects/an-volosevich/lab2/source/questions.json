@@ -1,0 +1,164 @@
+[
+  {
+    "id": "Q01",
+    "question": "Из каких двух основных компонентов состоит Direct3D и за что отвечает каждый из них?",
+    "question_en": "What are the two main components of Direct3D and what does each of them do?",
+    "sources": ["2405.14832"],
+    "evidence": ["Direct 3D Variational Auto-Encoder (D3D-VAE)", "Direct 3D Diffusion Transformer (D3D-DiT)"],
+    "answer_keys": ["VAE", "DiT", "triplane"],
+    "reference": "D3D-VAE кодирует 3D-форму (облако точек) в компактное латентное триплановое пространство; D3D-DiT — диффузионный трансформер, генерирующий латенты в этом пространстве по входному изображению."
+  },
+  {
+    "id": "Q02",
+    "question": "Что такое semi-continuous occupancy в D3D-VAE и зачем она нужна?",
+    "question_en": "What is the semi-continuous occupancy in D3D-VAE and why is it used?",
+    "sources": ["2405.14832"],
+    "evidence": ["we adopt semi-continuous occupancy", "a continuous value ranging from 0 to 1"],
+    "answer_keys": ["0", "1", "gradient"],
+    "reference": "Вблизи поверхности (|sdf| < s, s = 1/512) occupancy принимает непрерывные значения от 0 до 1, дальше — бинарные 0/1; это сглаживает резкие изменения градиента у поверхности и облегчает оптимизацию."
+  },
+  {
+    "id": "Q03",
+    "question": "Какие предобученные энкодеры изображений использует D3D-DiT для пиксельного и семантического выравнивания?",
+    "question_en": "Which pretrained image encoders does D3D-DiT use for pixel-level and semantic-level alignment?",
+    "sources": ["2405.14832"],
+    "evidence": ["We employ the pre-trained DINO-v2", "CLIP [40] visual model (ViT-L/14)"],
+    "answer_keys": ["DINO", "CLIP", "ViT-L/14"],
+    "reference": "Пиксельный уровень — DINO-v2 (ViT-L/14), токены конкатенируются с латентами в self-attention; семантический уровень — CLIP ViT-L/14 через cross-attention."
+  },
+  {
+    "id": "Q04",
+    "question": "Какой сэмплер, сколько шагов и какой guidance scale используются при инференсе Direct3D?",
+    "question_en": "Which sampler, how many steps and what guidance scale are used at Direct3D inference?",
+    "sources": ["2405.14832"],
+    "evidence": ["50 steps of DDIM"],
+    "answer_keys": ["DDIM", "50", "7.5"],
+    "reference": "50 шагов DDIM с guidance scale 7.5."
+  },
+  {
+    "id": "Q05",
+    "question": "На основе какой видео-диффузионной модели построен ViewCrafter и как в неё подаются рендеры облака точек?",
+    "question_en": "Which video diffusion model is ViewCrafter built on and how are point cloud renders fed into it?",
+    "sources": ["2409.02048"],
+    "evidence": ["DynamiCrafter", "concatenating the resulting latent images with noise"],
+    "answer_keys": ["DynamiCrafter", "VAE", "channel"],
+    "reference": "На image-to-video модели DynamiCrafter; рендеры облака точек кодируются VAE-энкодером и конкатенируются с шумом по каналам, референс дополнительно идёт через CLIP и cross-attention."
+  },
+  {
+    "id": "Q06",
+    "question": "Как ViewCrafter реконструирует облако точек по одному или нескольким изображениям?",
+    "question_en": "How does ViewCrafter reconstruct the point cloud from a single or sparse images?",
+    "sources": ["2409.02048"],
+    "evidence": ["we employ a dense stereo model", "Weiszfeld algorithm"],
+    "answer_keys": ["DUSt3R", "Weiszfeld"],
+    "reference": "Плотной стерео-моделью DUSt3R: она строит point maps и карты уверенности, фокусное расстояние находится алгоритмом Вейсфельда; одно изображение дублируется в пару."
+  },
+  {
+    "id": "Q07",
+    "question": "Как устроен алгоритм планирования траектории камеры в ViewCrafter и с какими параметрами он запускался в абляции?",
+    "question_en": "How does the camera trajectory planning algorithm in ViewCrafter work and which parameters were used in the ablation?",
+    "sources": ["2409.02048"],
+    "evidence": ["Next-Best-View", "N = 3, K = 5"],
+    "answer_keys": ["Next-Best-View", "K", "0.6"],
+    "reference": "Next-Best-View: из пространства поиска (четверть сферы) сэмплируются K кандидатных поз, по маскам дыр утилити-функция выбирает позу, открывающую достаточно, но не слишком много пропусков (порог Θ); затем генерация, обратная проекция и обновление облака. В абляции N = 3, K = 5, Θ = 0.6."
+  },
+  {
+    "id": "Q08",
+    "question": "На каких данных и в каком объёме обучали ViewCrafter?",
+    "question_en": "What data and how much of it was ViewCrafter trained on?",
+    "sources": ["2409.02048"],
+    "evidence": ["632,152 video pairs", "DL3DV"],
+    "answer_keys": ["DL3DV", "RealEstate10K", "632"],
+    "reference": "На смеси DL3DV и RealEstate10K: клипы по 25 кадров, рендеры облаков точек через DUSt3R и PyTorch3D — всего 632 152 пары видео."
+  },
+  {
+    "id": "Q09",
+    "question": "Что такое DreamEcom-400K и из каких шагов состоит пайплайн его построения?",
+    "question_en": "What is DreamEcom-400K and what steps does its construction pipeline consist of?",
+    "sources": ["2508.02155"],
+    "evidence": ["Using LLM to build image prompts", "Using segmentation method to get instance masks", "Using editing model to get reference images"],
+    "answer_keys": ["400", "Seedream", "SAM"],
+    "reference": "Датасет из 400k e-commerce примеров (изображение, двуязычный промпт, маска, референс фона). Шаги: LLM строит промпты, Seedream3 генерирует изображения, GroundingDINO + SAM дают маски, BAGEL удаляет товар и строит референс фона."
+  },
+  {
+    "id": "Q10",
+    "question": "На какой базовой модели построен DreamPainter и почему выбрана именно она?",
+    "question_en": "Which base model is DreamPainter built upon and why was it chosen?",
+    "sources": ["2508.02155"],
+    "evidence": ["DreamPainter is built upon CogView4"],
+    "answer_keys": ["CogView4"],
+    "reference": "На CogView4 — из-за подходящего размера модели и поддержки двух языков (китайского и английского)."
+  },
+  {
+    "id": "Q11",
+    "question": "Как устроено двухэтапное обучение DreamPainter?",
+    "question_en": "How is the two-stage training of DreamPainter organized?",
+    "sources": ["2508.02155"],
+    "evidence": ["Stage 1: Text-only control", "Stage 2: Reference-aware adaptation", "LoRA modules with a rank of 256"],
+    "answer_keys": ["LoRA", "256", "control branch"],
+    "reference": "Этап 1: обучается только control branch (6 DiT-блоков) с текстовым управлением, ~1k GPU-часов. Этап 2: control branch и база заморожены, добавляется LoRA ранга 256, референсы подаются в 50% примеров, ~700 GPU-часов."
+  },
+  {
+    "id": "Q12",
+    "question": "Чем LoRA scaling отличается от attention modulation в DreamPainter при малых значениях масштаба?",
+    "question_en": "How does LoRA scaling differ from attention modulation in DreamPainter at small scale values?",
+    "sources": ["2508.02155"],
+    "evidence": ["when the parameter is less than 0.4", "the model reverts to the state after the first stage training"],
+    "answer_keys": ["0.4"],
+    "reference": "При масштабе ≥ 0.4 оба способа регулируют случайность; ниже 0.4 attention modulation продолжает работать без потери качества, а уменьшение LoRA scale резко ухудшает изображения: модель откатывается к состоянию после первого этапа и не понимает формат референса."
+  },
+  {
+    "id": "Q13",
+    "question": "Из каких этапов состоит синтетическая аугментация данных в работе Preserving Product Fidelity?",
+    "question_en": "Which stages does the synthetic data augmentation in Preserving Product Fidelity consist of?",
+    "sources": ["2503.08729"],
+    "evidence": ["novel view generation, background/object disentanglement", "We generate novel viewpoints using image-to-video diffusion", "we used masked outpainting"],
+    "answer_keys": ["video", "outpainting", "negative"],
+    "reference": "Генерация новых ракурсов через image-to-video диффузию, смена фона маскированным outpainting (маска сегментации + промпты от LLM) и добавление негативов/контрфактуалов."
+  },
+  {
+    "id": "Q14",
+    "question": "Какое соотношение позитивных и негативных примеров использовали в Preserving Product Fidelity и что такое контрфактуалы?",
+    "question_en": "What positive-to-negative ratio was used in Preserving Product Fidelity and what are counterfactuals?",
+    "sources": ["2503.08729"],
+    "evidence": ["2:1 positive:negative", "We additionally added counterfactuals"],
+    "answer_keys": ["2:1"],
+    "reference": "2:1 (позитивы:негативы) — выше качество и точность ценой разнообразия. Контрфактуалы — изображения с тем же фоном, где в маску товара вписаны другие объекты."
+  },
+  {
+    "id": "Q15",
+    "question": "Какие результаты человеческой оценки получил метод Preserving Product Fidelity по сравнению с DreamBooth + LoRA?",
+    "question_en": "What human evaluation results did Preserving Product Fidelity obtain compared to DreamBooth + LoRA?",
+    "sources": ["2503.08729"],
+    "evidence": ["17.40", "majority vote over 3 raters"],
+    "answer_keys": ["17.4", "45.5", "10", "24"],
+    "reference": "Доля прошедших изображений 17.4% против 10%, доля товаров хотя бы с одним прошедшим изображением 45.5% против 24%; изображение проходит, если все 8 вопросов получили «да» по большинству из 3 оценщиков."
+  },
+  {
+    "id": "Q16",
+    "question": "Как ранг LoRA (1 против 64) влияет на точность товара и разнообразие сцен в Preserving Product Fidelity?",
+    "question_en": "How does the LoRA rank (1 vs 64) affect product fidelity and scene diversity in Preserving Product Fidelity?",
+    "sources": ["2503.08729"],
+    "evidence": ["rank 1 model learned the appearance of the desk much quicker", "rank 64 model took much longer"],
+    "answer_keys": ["700", "1800", "64"],
+    "reference": "Ранг 1 выучивает товар быстрее (700 шагов против 1800), но генерирует простые сцены и переобучается; ранг 64 учится дольше, зато сохраняет разнообразие и сложность сцен."
+  },
+  {
+    "id": "Q17",
+    "question": "В каких из работ используется LoRA и для чего?",
+    "question_en": "Which of the papers use LoRA and for what purpose?",
+    "sources": ["2508.02155", "2503.08729"],
+    "evidence": ["we incorporate learnable LoRA into the DiT blocks", "finetune the model using LoRA"],
+    "answer_keys": ["DreamPainter", "LoRA"],
+    "reference": "DreamPainter — LoRA ранга 256 на втором этапе для учёта референсного изображения (её масштаб регулирует влияние референса); Preserving Product Fidelity — LoRA-дообучение в стиле DreamBooth под конкретный товар."
+  },
+  {
+    "id": "Q18",
+    "question": "Какие работы используют image-to-video или видео-диффузионные модели и с какой целью?",
+    "question_en": "Which papers use image-to-video or video diffusion models and for what purpose?",
+    "sources": ["2409.02048", "2503.08729"],
+    "evidence": ["point-conditioned video diffusion model", "We generate novel viewpoints using image-to-video diffusion"],
+    "answer_keys": ["ViewCrafter", "novel"],
+    "reference": "ViewCrafter — видео-диффузия, обусловленная рендерами облака точек, для синтеза новых ракурсов сцены; Preserving Product Fidelity — image-to-video диффузия для генерации новых ракурсов товара в обучающих данных."
+  }
+]

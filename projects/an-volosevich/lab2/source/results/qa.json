@@ -1,0 +1,178 @@
+{
+ "index_id": "markdown-c800-o100-h-hybrid-bge-m3",
+ "top_n": 5,
+ "translate": true,
+ "summary": {
+  "key_facts": 0.7962962962962963,
+  "cited": 1.0,
+  "cite_source": 1,
+  "cite_evidence": 0.9444444444444444,
+  "llm_s": 2.32,
+  "tokens_in": 2297.3333333333335,
+  "refusal_rate": 1.0
+ },
+ "questions": [
+  {
+   "id": "Q01",
+   "key_facts": 0.6666666666666666,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.38,
+   "tokens_in": 2543
+  },
+  {
+   "id": "Q02",
+   "key_facts": 0.6666666666666666,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.92,
+   "tokens_in": 2965
+  },
+  {
+   "id": "Q03",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.45,
+   "tokens_in": 2636
+  },
+  {
+   "id": "Q04",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.05,
+   "tokens_in": 2556
+  },
+  {
+   "id": "Q05",
+   "key_facts": 0.3333333333333333,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.57,
+   "tokens_in": 2312
+  },
+  {
+   "id": "Q06",
+   "key_facts": 0.5,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.16,
+   "tokens_in": 2254
+  },
+  {
+   "id": "Q07",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 3.53,
+   "tokens_in": 2983
+  },
+  {
+   "id": "Q08",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.53,
+   "tokens_in": 2246
+  },
+  {
+   "id": "Q09",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 3.3,
+   "tokens_in": 2195
+  },
+  {
+   "id": "Q10",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.38,
+   "tokens_in": 2800
+  },
+  {
+   "id": "Q11",
+   "key_facts": 0.3333333333333333,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.9,
+   "tokens_in": 2083
+  },
+  {
+   "id": "Q12",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.35,
+   "tokens_in": 2450
+  },
+  {
+   "id": "Q13",
+   "key_facts": 0.6666666666666666,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.11,
+   "tokens_in": 1550
+  },
+  {
+   "id": "Q14",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.48,
+   "tokens_in": 1427
+  },
+  {
+   "id": "Q15",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 1.78,
+   "tokens_in": 2059
+  },
+  {
+   "id": "Q16",
+   "key_facts": 0.6666666666666666,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 2.92,
+   "tokens_in": 2080
+  },
+  {
+   "id": "Q17",
+   "key_facts": 1.0,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 0.0,
+   "llm_s": 3.62,
+   "tokens_in": 2403
+  },
+  {
+   "id": "Q18",
+   "key_facts": 0.5,
+   "cited": 1.0,
+   "cite_source": 1,
+   "cite_evidence": 1.0,
+   "llm_s": 3.33,
+   "tokens_in": 1810
+  }
+ ]
+}
