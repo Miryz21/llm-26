@@ -114,7 +114,13 @@ python show_chunks.py --paper Direct3D --section "4.1" --chunk-size 200 --overla
 python show_chunks.py --paper ViewCrafter --splitter recursive --chunk-size 400 --overlap 60
 python show_chunks.py --file notes.md --chunk-size 300      # свой Markdown; «--file -» — из stdin
 python show_chunks.py --section "4.1" --format markdown     # таблица, как ниже
+python show_chunks.py --paper Preserving --format full     # полный текст чанков в Markdown
 ```
+
+**Полный текст чанков** — в [`results/chunks_example.md`](source/results/chunks_example.md):
+статья Preserving Product Fidelity целиком в итоговой конфигурации, её раздел 2 в режиме
+`recursive` (склейка разделов и висящие заголовки) и длинный раздел ViewCrafter 4.2, который
+режется на несколько чанков с перекрытием и хвостом таблицы без шапки.
 
 Ниже — раздел «4.1 Implementation Details» статьи Direct3D (страницы 7–8, ~570 токенов: абзац про
 D3D-VAE, подпись к рисунку, таблица user study и абзац про D3D-DiT) при трёх размерах чанка.
@@ -355,5 +361,5 @@ lab2/
     ├── questions.json         18 вопросов с эталоном
     ├── requirements.txt
     ├── data/markdown/         нормализованный корпус (PDF скачиваются в data/pdf/)
-    └── results/               таблицы, ответы, график
+    └── results/               таблицы, ответы, график, примеры чанков (chunks_example.md)
 ```

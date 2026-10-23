@@ -250,6 +250,10 @@ D3D-DiT. Our diffusion model adopts the network configuration of DiT-XL/2 …
 «…при инференсе Direct3D?» содержит название статьи. В payload Qdrant хранится и чистый текст
 (для промпта и сниппета), и раздел со страницами отдельными полями.
 
+Полный текст чанков с метаданными и отмеченным перекрытием —
+[`source/results/chunks_example.md`](source/results/chunks_example.md) (генерируется
+`show_chunks.py --format full`).
+
 ### 5.3. Статистика разбиений
 
 | Конфигурация | Чанков | Мин. | Среднее | Медиана | Макс. токенов | Чанков на 2+ страницах |

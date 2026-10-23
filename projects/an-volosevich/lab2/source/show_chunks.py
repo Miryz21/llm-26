@@ -5,6 +5,7 @@
     python show_chunks.py --file notes.md                             # свой Markdown-файл
     echo "# Заголовок ..." | python show_chunks.py --file -           # текст из stdin
     python show_chunks.py --section "4.1" --format markdown           # таблица для README
+    python show_chunks.py --paper Preserving --format full            # полный текст чанков в Markdown
 
 В терминале чанки чередуют цвета, а перекрытие с предыдущим чанком подсвечено жёлтым фоном.
 """
@@ -89,13 +90,34 @@ def render_markdown(chunks: list[dict], cfg) -> str:
     return "\n".join(lines)
 
 
+def render_full(chunks: list[dict], cfg, meta: dict, section: str | None) -> str:
+    """Полный текст каждого чанка с метаданными; перекрытие отделено строкой-маркером."""
+    where = f", разделы «{section}»" if section else ""
+    lines = [f"## {meta.get('short', '')}: {cfg.splitter}, chunk_size {cfg.chunk_size}, overlap {cfg.overlap}{where}",
+             "", f"Чанков: {len(chunks)}. Команда: `python show_chunks.py --paper \"{meta.get('short', '')}\" "
+             f"--splitter {cfg.splitter} --chunk-size {cfg.chunk_size} --overlap {cfg.overlap}"
+             + (f" --section \"{section}\"" if section else "") + " --format full`", ""]
+    for i, c in enumerate(chunks):
+        ov = f"{c['overlap_tokens']} ток. — первые строки до маркера" if c["overlap"] else "нет"
+        header = f"{meta.get('short', '')} | {c['section']}" if c["section"] else meta.get("short", "")
+        lines += [f"### Чанк {i + 1} · `{c['id']}` · стр. {pages(c)} · {c['tokens']} ток.", "",
+                  f"- **Раздел:** {c['section'] or '— (до первого заголовка)'}",
+                  f"- **Строка-префикс для эмбеддинга:** `{header}`",
+                  f"- **Перекрытие с предыдущим чанком:** {ov}", "", "````text"]
+        if c["overlap"]:
+            lines += [c["overlap"].rstrip(), "─────── конец перекрытия ───────"]
+        lines += [c["text"][len(c["overlap"]):].strip(), "````", ""]
+    return "\n".join(lines)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0],
                                      formatter_class=argparse.RawDescriptionHelpFormatter, epilog=__doc__)
     parser.add_argument("--paper", default="Direct3D", help="arXiv id или короткое имя статьи корпуса")
     parser.add_argument("--section", help="показать только чанки, чей раздел содержит эту строку")
     parser.add_argument("--file", help="свой Markdown-файл вместо статьи корпуса; «-» — stdin")
-    parser.add_argument("--format", choices=("terminal", "markdown"), default="terminal")
+    parser.add_argument("--format", choices=("terminal", "markdown", "full"), default="terminal",
+                        help="terminal — цветной вывод; markdown — таблица; full — полный текст чанков в Markdown")
     add_index_args(parser)
     args = parser.parse_args()
     cfg = index_config_from_args(args)
@@ -106,7 +128,12 @@ def main():
         chunks = [c for c in chunks if args.section.lower() in c["section"].lower()]
         if not chunks:
             raise SystemExit(f"нет чанков в разделах, содержащих «{args.section}»")
-    print(render_terminal(chunks, cfg) if args.format == "terminal" else render_markdown(chunks, cfg))
+    if args.format == "terminal":
+        print(render_terminal(chunks, cfg))
+    elif args.format == "markdown":
+        print(render_markdown(chunks, cfg))
+    else:
+        print(render_full(chunks, cfg, meta, args.section))
 
 
 if __name__ == "__main__":
