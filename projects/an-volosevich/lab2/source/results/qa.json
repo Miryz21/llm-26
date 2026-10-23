@@ -3,12 +3,12 @@
  "top_n": 5,
  "translate": true,
  "summary": {
-  "key_facts": 0.7962962962962963,
+  "key_facts": 0.8333333333333334,
   "cited": 1.0,
   "cite_source": 1,
   "cite_evidence": 0.9444444444444444,
-  "llm_s": 2.32,
-  "tokens_in": 2297.3333333333335,
+  "llm_s": 2.147222222222222,
+  "tokens_in": 2285.6111111111113,
   "refusal_rate": 1.0
  },
  "questions": [
@@ -18,8 +18,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.38,
-   "tokens_in": 2543
+   "llm_s": 2.29,
+   "tokens_in": 2271
   },
   {
    "id": "Q02",
@@ -27,8 +27,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.92,
-   "tokens_in": 2965
+   "llm_s": 2.74,
+   "tokens_in": 2660
   },
   {
    "id": "Q03",
@@ -36,8 +36,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.45,
-   "tokens_in": 2636
+   "llm_s": 1.16,
+   "tokens_in": 2560
   },
   {
    "id": "Q04",
@@ -45,8 +45,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.05,
-   "tokens_in": 2556
+   "llm_s": 1.02,
+   "tokens_in": 2521
   },
   {
    "id": "Q05",
@@ -54,8 +54,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.57,
-   "tokens_in": 2312
+   "llm_s": 2.28,
+   "tokens_in": 2623
   },
   {
    "id": "Q06",
@@ -63,8 +63,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.16,
-   "tokens_in": 2254
+   "llm_s": 2.24,
+   "tokens_in": 2654
   },
   {
    "id": "Q07",
@@ -72,8 +72,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 3.53,
-   "tokens_in": 2983
+   "llm_s": 2.65,
+   "tokens_in": 3017
   },
   {
    "id": "Q08",
@@ -81,8 +81,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.53,
-   "tokens_in": 2246
+   "llm_s": 1.22,
+   "tokens_in": 2402
   },
   {
    "id": "Q09",
@@ -90,8 +90,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 3.3,
-   "tokens_in": 2195
+   "llm_s": 2.94,
+   "tokens_in": 2199
   },
   {
    "id": "Q10",
@@ -99,17 +99,17 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.38,
-   "tokens_in": 2800
+   "llm_s": 1.33,
+   "tokens_in": 2717
   },
   {
    "id": "Q11",
-   "key_facts": 0.3333333333333333,
+   "key_facts": 0.6666666666666666,
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.9,
-   "tokens_in": 2083
+   "llm_s": 2.97,
+   "tokens_in": 2013
   },
   {
    "id": "Q12",
@@ -117,17 +117,17 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.35,
+   "llm_s": 2.0,
    "tokens_in": 2450
   },
   {
    "id": "Q13",
-   "key_facts": 0.6666666666666666,
+   "key_facts": 1.0,
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.11,
-   "tokens_in": 1550
+   "llm_s": 2.05,
+   "tokens_in": 1619
   },
   {
    "id": "Q14",
@@ -135,8 +135,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.48,
-   "tokens_in": 1427
+   "llm_s": 1.64,
+   "tokens_in": 1476
   },
   {
    "id": "Q15",
@@ -144,8 +144,8 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 1.78,
-   "tokens_in": 2059
+   "llm_s": 1.43,
+   "tokens_in": 2097
   },
   {
    "id": "Q16",
@@ -153,26 +153,26 @@
    "cited": 1.0,
    "cite_source": 1,
    "cite_evidence": 1.0,
-   "llm_s": 2.92,
-   "tokens_in": 2080
+   "llm_s": 2.64,
+   "tokens_in": 2118
   },
   {
    "id": "Q17",
    "key_facts": 1.0,
    "cited": 1.0,
    "cite_source": 1,
-   "cite_evidence": 0.0,
-   "llm_s": 3.62,
-   "tokens_in": 2403
+   "cite_evidence": 1.0,
+   "llm_s": 2.92,
+   "tokens_in": 1809
   },
   {
    "id": "Q18",
    "key_facts": 0.5,
    "cited": 1.0,
    "cite_source": 1,
-   "cite_evidence": 1.0,
-   "llm_s": 3.33,
-   "tokens_in": 1810
+   "cite_evidence": 0.0,
+   "llm_s": 3.13,
+   "tokens_in": 1935
   }
  ]
 }

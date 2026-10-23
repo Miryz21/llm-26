@@ -33,6 +33,7 @@ KS = (5, 10)
 BASE = IndexConfig(splitter="markdown", chunk_size=400, overlap=60, headers=True, vectors="hybrid", model="bge-m3")
 DENSE_BASE = IndexConfig(**{**BASE.to_dict(), "vectors": "dense"})
 C800 = IndexConfig(**{**BASE.to_dict(), "chunk_size": 800, "overlap": 100})
+R800 = IndexConfig(**{**C800.to_dict(), "splitter": "recursive"})
 BOTH, TRANSLATED = ("ru", "en"), ("ru→en",)
 EXPERIMENTS = [
     ("база: hybrid bge-m3 + BM25", BASE, {}, BOTH),
@@ -51,6 +52,8 @@ EXPERIMENTS = [
     ("база + перевод запроса", BASE, {"translate": True}, TRANSLATED),
     ("dense bge-m3 + перевод запроса", DENSE_BASE, {"translate": True}, TRANSLATED),
     ("чанк 800 + перевод запроса", C800, {"translate": True}, TRANSLATED),
+    ("recursive, чанк 800", R800, {}, BOTH),
+    ("recursive, чанк 800 + перевод запроса", R800, {"translate": True}, TRANSLATED),
 ]
 # (название, параметры HNSW, квантование int8, ef при поиске, точный перебор)
 HNSW_VARIANTS = [

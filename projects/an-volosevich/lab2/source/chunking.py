@@ -1,32 +1,31 @@
 """Разбиение нормализованного Markdown на чанки с метаданными (статья, раздел, страницы).
 
-Текст режется на предложения (таблица — единый блок), предложения упаковываются в окна
-по `chunk_size` токенов, а перекрытие набирается из последних предложений предыдущего окна
-(не больше `overlap` токенов), поэтому предложение никогда не обрывается посередине.
+Используются готовые сплиттеры langchain-text-splitters:
+- markdown — MarkdownHeaderTextSplitter режет статью по заголовкам h1–h3 (h4 остаются внутри
+  родительского h3), затем RecursiveCharacterTextSplitter режет длинные разделы на окна;
+- recursive — RecursiveCharacterTextSplitter по всей статье, без учёта заголовков.
 
-- markdown — окна не пересекают границы разделов h1–h3 (подразделы h4 входят в родительский h3);
-- recursive — сплошное окно по всей статье без учёта заголовков.
+Размер окна и overlap считаются в токенах токенизатора bge-m3. Номера страниц восстанавливаются
+по положению чанка в исходном тексте относительно маркеров <!-- page: N -->, после чего маркеры
+из текста удаляются. Положение ищется по первой и последней строке чанка: `add_start_index`
+LangChain ненадёжен — после склейки кусков через разделитель текст чанка не всегда является точной
+подстрокой исходного, и смещение приходит равным −1.
 """
+import bisect
 import functools
 import os
 import re
-from dataclasses import dataclass
 
+from langchain_text_splitters import MarkdownHeaderTextSplitter, RecursiveCharacterTextSplitter
 from transformers import AutoTokenizer
 
 from config import MARKDOWN_DIR, PAPERS, TOKENIZER, IndexConfig
 
-SENTENCE_END = re.compile(r"(?<=[.!?])\s+(?=[A-Z(\[\"'])")
 PAGE_MARK = re.compile(r"<!-- page: (\d+) -->")
-
-
-@dataclass
-class Unit:
-    text: str
-    page: int
-    section: tuple[str, ...]
-    paragraph: int
-    tokens: int
+HEADING = re.compile(r"^(#{1,3})\s+(.*)$", re.MULTILINE)
+HEADERS = [("#", "h1"), ("##", "h2"), ("###", "h3")]
+# MarkdownHeaderTextSplitter склеивает абзацы через «  \n», поэтому этот разделитель идёт первым.
+SEPARATORS = ["\n\n", "  \n", "\n", ". ", " ", ""]
 
 
 @functools.cache
@@ -49,109 +48,92 @@ def read_markdown(path: str) -> tuple[dict, str]:
     return meta, body
 
 
-def split_long(text: str, limit: int) -> list[str]:
-    """Режет слишком длинное предложение/строку таблицы по словам."""
-    words, parts, cur = text.split(), [], []
-    for word in words:
-        cur.append(word)
-        if count_tokens(" ".join(cur)) > limit:
-            cur.pop()
-            parts.append(" ".join(cur))
-            cur = [word]
-    parts.append(" ".join(cur))
-    return [p for p in parts if p]
+def window_splitter(cfg: IndexConfig) -> RecursiveCharacterTextSplitter:
+    return RecursiveCharacterTextSplitter.from_huggingface_tokenizer(
+        tokenizer(), chunk_size=cfg.chunk_size, chunk_overlap=cfg.overlap,
+        separators=SEPARATORS, strip_whitespace=True)
 
 
-def units_of(body: str, limit: int) -> list[Unit]:
-    units, page, section, paragraph = [], 1, (), 0
-    for block in re.split(r"\n\s*\n", body):
-        block = block.strip()
-        mark = PAGE_MARK.fullmatch(block)
-        if mark:
-            page = int(mark.group(1))
-            continue
-        if not block:
-            continue
-        heading = re.match(r"^(#{1,4})\s+(.*)$", block)
-        if heading:
-            level = len(heading.group(1))
-            section = section[:level - 1] + ("",) * max(0, level - 1 - len(section)) + (heading.group(2),)
-            continue
-        paragraph += 1
-        if block.startswith("|"):
-            pieces = [block] if count_tokens(block) <= limit else block.splitlines()
-        else:
-            pieces = SENTENCE_END.split(" ".join(block.split()))
-        for piece in pieces:
-            for part in ([piece] if count_tokens(piece) <= limit else split_long(piece, limit)):
-                units.append(Unit(part, page, section, paragraph, count_tokens(part)))
-    return units
+def pages_of(text: str, start: int, end: int, first_page: int) -> list[int]:
+    """Страница начала фрагмента text[start:end] и все маркеры страниц внутри него."""
+    marks = [(m.start(), int(m.group(1))) for m in PAGE_MARK.finditer(text)]
+    before = [p for pos, p in marks if pos <= start]
+    pages = {before[-1] if before else first_page}
+    pages |= {p for pos, p in marks if start < pos < end}
+    return sorted(pages)
 
 
-def pack(units: list[Unit], size: int, overlap: int) -> list[list[Unit]]:
-    windows, cur, cur_tokens = [], [], 0
-    for unit in units:
-        if cur and cur_tokens + unit.tokens > size:
-            windows.append(cur)
-            tail, tail_tokens = [], 0
-            for prev in reversed(cur):
-                if tail_tokens + prev.tokens > overlap:
-                    break
-                tail.insert(0, prev)
-                tail_tokens += prev.tokens
-            while tail and tail_tokens + unit.tokens > size:
-                tail_tokens -= tail.pop(0).tokens
-            cur, cur_tokens = tail, tail_tokens
-        cur.append(unit)
-        cur_tokens += unit.tokens
-    if cur:
-        windows.append(cur)
-    return windows
+def clean(text: str) -> str:
+    text = PAGE_MARK.sub("", text).replace("  \n", "\n\n")
+    return re.sub(r"\n{3,}", "\n\n", text).strip()
 
 
-def join_units(units: list[Unit]) -> str:
-    out = units[0].text
-    for prev, unit in zip(units, units[1:]):
-        sep = " " if prev.paragraph == unit.paragraph and not unit.text.startswith("|") else "\n\n"
-        out += sep + unit.text
+def locate(text: str, chunk: str, after: int) -> tuple[int, int]:
+    """Начало и конец чанка в исходном тексте: первая и последняя строки — непрерывные куски источника."""
+    lines = [l.strip() for l in chunk.splitlines() if l.strip()]
+    head, tail = lines[0][:60], lines[-1][-60:]
+    start = text.find(head, after)
+    if start < 0:
+        start = text.find(head)
+    end = text.find(tail, start)
+    return start, (end + len(tail) if end >= 0 else start + len(chunk))
+
+
+def windows(text: str, cfg: IndexConfig, first_page: int) -> list[tuple[str, list[int], int]]:
+    """Окна RecursiveCharacterTextSplitter: (текст, страницы, смещение начала)."""
+    out, after = [], 0
+    for piece in window_splitter(cfg).split_text(text):
+        start, end = locate(text, piece, after)
+        after = start + 1
+        body = clean(piece)
+        if body:
+            out.append((body, pages_of(text, start, end, first_page), start))
     return out
 
 
-def section_name(section: tuple[str, ...]) -> str:
-    return " > ".join(s for s in section[1:] if s)
+def sections(body: str) -> list[tuple[str, str, int]]:
+    """Разделы h1–h3: (имя раздела, текст, страница начала раздела)."""
+    out, page = [], 1
+    for doc in MarkdownHeaderTextSplitter(HEADERS, strip_headers=True).split_text(body):
+        name = " > ".join(doc.metadata[k] for k in ("h2", "h3") if k in doc.metadata)
+        out.append((name, doc.page_content, page))
+        marks = PAGE_MARK.findall(doc.page_content)
+        if marks:
+            page = int(marks[-1])
+    return out
 
 
 def chunk_paper(paper: dict, cfg: IndexConfig) -> list[dict]:
     meta, body = read_markdown(os.path.join(MARKDOWN_DIR, f"{paper['arxiv_id']}.md"))
-    units = units_of(body, cfg.chunk_size)
+    pieces = []
     if cfg.splitter == "markdown":
-        groups, key = [], None
-        for unit in units:
-            if unit.section[:3] != key:
-                groups.append([])
-                key = unit.section[:3]
-            groups[-1].append(unit)
+        for name, text, first_page in sections(body):
+            pieces += [(name, t, pages) for t, pages, _ in windows(text, cfg, first_page)]
     else:
-        groups = [units]
+        # Раздел чанка — последний заголовок h2/h3 перед его началом.
+        heads = [(m.start(), len(m.group(1)), m.group(2)) for m in HEADING.finditer(body)]
+        starts = [h[0] for h in heads]
+        for t, pages, start in windows(body, cfg, 1):
+            path = {}
+            for _, level, title in heads[:bisect.bisect_right(starts, start)]:
+                path = {k: v for k, v in path.items() if k < level} | {level: title}
+            pieces.append((" > ".join(path[k] for k in (2, 3) if k in path), t, pages))
 
     chunks = []
-    for group in groups:
-        for window in pack(group, cfg.chunk_size, cfg.overlap):
-            text = join_units(window)
-            section = section_name(window[0].section)
-            header = f"{meta['short']} | {section}" if section else meta["short"]
-            chunks.append({
-                "id": f"{paper['arxiv_id']}:{len(chunks):04d}",
-                "arxiv_id": paper["arxiv_id"],
-                "paper": meta["short"],
-                "title": meta["title"],
-                "url": meta["url"],
-                "section": section,
-                "pages": sorted({u.page for u in window}),
-                "text": text,
-                "embed_text": f"{header}\n{text}" if cfg.headers else text,
-                "tokens": sum(u.tokens for u in window),
-            })
+    for section, text, pages in pieces:
+        header = f"{meta['short']} | {section}" if section else meta["short"]
+        chunks.append({
+            "id": f"{paper['arxiv_id']}:{len(chunks):04d}",
+            "arxiv_id": paper["arxiv_id"],
+            "paper": meta["short"],
+            "title": meta["title"],
+            "url": meta["url"],
+            "section": section,
+            "pages": pages,
+            "text": text,
+            "embed_text": f"{header}\n{text}" if cfg.headers else text,
+            "tokens": count_tokens(text),
+        })
     return chunks
 
 
