@@ -1,0 +1,73 @@
+[
+  {
+    "arxiv_id": "2405.14832v2",
+    "title": "Direct3D: Scalable Image-to-3D Generation via 3D Latent Diffusion Transformer",
+    "authors": [
+      "Shuang Wu",
+      "Youtian Lin",
+      "Feihu Zhang",
+      "Yifei Zeng",
+      "Jingxi Xu",
+      "Philip Torr",
+      "Xun Cao",
+      "Yao Yao"
+    ],
+    "published": "2024-05-23",
+    "updated": "2024-06-01",
+    "url": "http://arxiv.org/abs/2405.14832v2",
+    "pdf_file": "pdf/2405.14832v2.pdf"
+  },
+  {
+    "arxiv_id": "2409.02048v1",
+    "title": "ViewCrafter: Taming Video Diffusion Models for High-fidelity Novel View Synthesis",
+    "authors": [
+      "Wangbo Yu",
+      "Jinbo Xing",
+      "Li Yuan",
+      "Wenbo Hu",
+      "Xiaoyu Li",
+      "Zhipeng Huang",
+      "Xiangjun Gao",
+      "Tien-Tsin Wong",
+      "Ying Shan",
+      "Yonghong Tian"
+    ],
+    "published": "2024-09-03",
+    "updated": "2024-09-03",
+    "url": "http://arxiv.org/abs/2409.02048v1",
+    "pdf_file": "pdf/2409.02048v1.pdf"
+  },
+  {
+    "arxiv_id": "2508.02155v1",
+    "title": "DreamPainter: Image Background Inpainting for E-commerce Scenarios",
+    "authors": [
+      "Sijie Zhao",
+      "Jing Cheng",
+      "Yaoyao Wu",
+      "Hao Xu",
+      "Shaohui Jiao"
+    ],
+    "published": "2025-08-04",
+    "updated": "2025-08-04",
+    "url": "http://arxiv.org/abs/2508.02155v1",
+    "pdf_file": "pdf/2508.02155v1.pdf"
+  },
+  {
+    "arxiv_id": "2503.08729v1",
+    "title": "Preserving Product Fidelity in Large Scale Image Recontextualization with Diffusion Models",
+    "authors": [
+      "Ishaan Malhi",
+      "Praneet Dutta",
+      "Ellie Talius",
+      "Sally Ma",
+      "Brendan Driscoll",
+      "Krista Holden",
+      "Garima Pruthi",
+      "Arunachalam Narayanaswamy"
+    ],
+    "published": "2025-03-11",
+    "updated": "2025-03-11",
+    "url": "http://arxiv.org/abs/2503.08729v1",
+    "pdf_file": "pdf/2503.08729v1.pdf"
+  }
+]

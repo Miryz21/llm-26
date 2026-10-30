@@ -1,0 +1,4642 @@
+{
+  "schema_name": "DoclingDocument",
+  "version": "1.10.0",
+  "name": "2503.08729v1",
+  "origin": {
+    "mimetype": "application/pdf",
+    "binary_hash": 2270563688412027544,
+    "filename": "2503.08729v1.pdf"
+  },
+  "furniture": {
+    "self_ref": "#/furniture",
+    "children": [],
+    "content_layer": "furniture",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "body": {
+    "self_ref": "#/body",
+    "children": [
+      {
+        "$ref": "#/texts/0"
+      },
+      {
+        "$ref": "#/groups/0"
+      },
+      {
+        "$ref": "#/pictures/0"
+      },
+      {
+        "$ref": "#/texts/6"
+      },
+      {
+        "$ref": "#/texts/7"
+      },
+      {
+        "$ref": "#/texts/8"
+      },
+      {
+        "$ref": "#/texts/9"
+      },
+      {
+        "$ref": "#/texts/10"
+      },
+      {
+        "$ref": "#/texts/11"
+      },
+      {
+        "$ref": "#/texts/12"
+      },
+      {
+        "$ref": "#/texts/13"
+      },
+      {
+        "$ref": "#/texts/14"
+      },
+      {
+        "$ref": "#/texts/15"
+      },
+      {
+        "$ref": "#/texts/16"
+      },
+      {
+        "$ref": "#/texts/17"
+      },
+      {
+        "$ref": "#/texts/18"
+      },
+      {
+        "$ref": "#/texts/19"
+      },
+      {
+        "$ref": "#/texts/20"
+      },
+      {
+        "$ref": "#/texts/21"
+      },
+      {
+        "$ref": "#/texts/22"
+      },
+      {
+        "$ref": "#/texts/23"
+      },
+      {
+        "$ref": "#/texts/24"
+      },
+      {
+        "$ref": "#/texts/25"
+      },
+      {
+        "$ref": "#/texts/26"
+      },
+      {
+        "$ref": "#/texts/27"
+      },
+      {
+        "$ref": "#/texts/28"
+      },
+      {
+        "$ref": "#/texts/29"
+      },
+      {
+        "$ref": "#/texts/30"
+      },
+      {
+        "$ref": "#/texts/31"
+      },
+      {
+        "$ref": "#/texts/32"
+      },
+      {
+        "$ref": "#/texts/33"
+      },
+      {
+        "$ref": "#/texts/34"
+      },
+      {
+        "$ref": "#/texts/35"
+      },
+      {
+        "$ref": "#/texts/36"
+      },
+      {
+        "$ref": "#/texts/37"
+      },
+      {
+        "$ref": "#/texts/38"
+      },
+      {
+        "$ref": "#/texts/39"
+      },
+      {
+        "$ref": "#/texts/40"
+      },
+      {
+        "$ref": "#/texts/41"
+      },
+      {
+        "$ref": "#/texts/42"
+      },
+      {
+        "$ref": "#/tables/0"
+      },
+      {
+        "$ref": "#/texts/43"
+      },
+      {
+        "$ref": "#/texts/44"
+      },
+      {
+        "$ref": "#/texts/45"
+      },
+      {
+        "$ref": "#/texts/46"
+      },
+      {
+        "$ref": "#/tables/1"
+      },
+      {
+        "$ref": "#/texts/47"
+      },
+      {
+        "$ref": "#/texts/48"
+      },
+      {
+        "$ref": "#/texts/49"
+      },
+      {
+        "$ref": "#/groups/1"
+      },
+      {
+        "$ref": "#/texts/50"
+      },
+      {
+        "$ref": "#/groups/2"
+      },
+      {
+        "$ref": "#/texts/51"
+      },
+      {
+        "$ref": "#/texts/52"
+      },
+      {
+        "$ref": "#/texts/53"
+      },
+      {
+        "$ref": "#/pictures/1"
+      },
+      {
+        "$ref": "#/pictures/2"
+      },
+      {
+        "$ref": "#/texts/56"
+      },
+      {
+        "$ref": "#/pictures/3"
+      },
+      {
+        "$ref": "#/pictures/4"
+      },
+      {
+        "$ref": "#/groups/3"
+      },
+      {
+        "$ref": "#/texts/59"
+      },
+      {
+        "$ref": "#/texts/60"
+      },
+      {
+        "$ref": "#/texts/61"
+      },
+      {
+        "$ref": "#/texts/62"
+      },
+      {
+        "$ref": "#/pictures/5"
+      },
+      {
+        "$ref": "#/texts/64"
+      },
+      {
+        "$ref": "#/texts/65"
+      },
+      {
+        "$ref": "#/texts/66"
+      },
+      {
+        "$ref": "#/texts/67"
+      },
+      {
+        "$ref": "#/texts/68"
+      },
+      {
+        "$ref": "#/texts/69"
+      },
+      {
+        "$ref": "#/texts/70"
+      },
+      {
+        "$ref": "#/pictures/6"
+      },
+      {
+        "$ref": "#/texts/72"
+      },
+      {
+        "$ref": "#/pictures/7"
+      },
+      {
+        "$ref": "#/pictures/8"
+      },
+      {
+        "$ref": "#/texts/75"
+      },
+      {
+        "$ref": "#/texts/76"
+      },
+      {
+        "$ref": "#/texts/77"
+      },
+      {
+        "$ref": "#/texts/78"
+      },
+      {
+        "$ref": "#/texts/79"
+      },
+      {
+        "$ref": "#/texts/80"
+      },
+      {
+        "$ref": "#/texts/81"
+      },
+      {
+        "$ref": "#/pictures/9"
+      },
+      {
+        "$ref": "#/texts/83"
+      }
+    ],
+    "content_layer": "body",
+    "name": "_root_",
+    "label": "unspecified"
+  },
+  "groups": [
+    {
+      "self_ref": "#/groups/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/1"
+        },
+        {
+          "$ref": "#/texts/2"
+        },
+        {
+          "$ref": "#/texts/3"
+        },
+        {
+          "$ref": "#/texts/4"
+        }
+      ],
+      "content_layer": "body",
+      "name": "group",
+      "label": "key_value_area"
+    },
+    {
+      "self_ref": "#/groups/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    },
+    {
+      "self_ref": "#/groups/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/58"
+        }
+      ],
+      "content_layer": "body",
+      "name": "list",
+      "label": "list"
+    }
+  ],
+  "texts": [
+    {
+      "self_ref": "#/texts/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 18.759999999999998,
+            "t": 584.18,
+            "r": 36.206559297218156,
+            "b": 232.0,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            38
+          ]
+        }
+      ],
+      "orig": "arXiv:2503.08729v1 [cs.CV] 11 Mar 2025",
+      "text": "arXiv:2503.08729v1 [cs.CV] 11 Mar 2025"
+    },
+    {
+      "self_ref": "#/texts/1",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 116.468,
+            "t": 636.0411054,
+            "r": 501.67487644,
+            "b": 625.5808166,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            74
+          ]
+        }
+      ],
+      "orig": "IshaanMalhi \u2217\u2020 Praneet Dutta \u2020 Ellie Talius \u2020 SallyMa \u2020 Brendan Driscoll \u2021",
+      "text": "IshaanMalhi \u2217\u2020 Praneet Dutta \u2020 Ellie Talius \u2020 SallyMa \u2020 Brendan Driscoll \u2021"
+    },
+    {
+      "self_ref": "#/texts/2",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 113.97800000000001,
+            "t": 607.8471054,
+            "r": 180.73287644,
+            "b": 597.3868166000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            15
+          ]
+        }
+      ],
+      "orig": "Krista Holden \u2021",
+      "text": "Krista Holden \u2021"
+    },
+    {
+      "self_ref": "#/texts/3",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 221.078,
+            "t": 607.8471054,
+            "r": 290.59287644,
+            "b": 597.3868166000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            15
+          ]
+        }
+      ],
+      "orig": "Garima Pruthi \u2021",
+      "text": "Garima Pruthi \u2021"
+    },
+    {
+      "self_ref": "#/texts/4",
+      "parent": {
+        "$ref": "#/groups/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 330.937,
+            "t": 607.8471054,
+            "r": 469.63287644,
+            "b": 597.3868166000001,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "Arunachalam Narayanaswamy \u2020",
+      "text": "Arunachalam Narayanaswamy \u2020"
+    },
+    {
+      "self_ref": "#/texts/5",
+      "parent": {
+        "$ref": "#/pictures/0"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 108.0,
+            "t": 325.51265259999997,
+            "r": 504.00348702600013,
+            "b": 284.0837743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            349
+          ]
+        }
+      ],
+      "orig": "Figure 1: Given a few input images of a real world product, our system can generate images that not only maintain high fidelity to the original product, but also recontextualize it in novel settings beyond background changes: from showcasing it in a new perspective, adding object occlusions, to creating different and realistic lighting conditions.",
+      "text": "Figure 1: Given a few input images of a real world product, our system can generate images that not only maintain high fidelity to the original product, but also recontextualize it in novel settings beyond background changes: from showcasing it in a new perspective, adding object occlusions, to creating different and realistic lighting conditions."
+    },
+    {
+      "self_ref": "#/texts/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 278.288,
+            "t": 258.73283519999995,
+            "r": 333.72216710000004,
+            "b": 248.47051267964594,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            8
+          ]
+        }
+      ],
+      "orig": "ABSTRACT",
+      "text": "ABSTRACT",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 143.397,
+            "t": 230.57865259999994,
+            "r": 469.7860791959994,
+            "b": 112.43777439292035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            810
+          ]
+        }
+      ],
+      "orig": "We present a framework for high-fidelity product image recontextualization using text-to-image diffusion models and a novel data augmentation pipeline. This pipeline leverages image-to-video diffusion, in/outpainting & negatives to create synthetic training data, addressing limitations of real-world data collection for this task. Our method improves the quality and diversity of generated images by disentangling product representations and enhancing the model's understanding of product characteristics. Evaluation on the ABO dataset and a private product dataset, using automated metrics and human assessment, demonstrates the effectiveness of our framework in generating realistic and compelling product visualizations, with implications for applications such as e-commerce and virtual product showcasing.",
+      "text": "We present a framework for high-fidelity product image recontextualization using text-to-image diffusion models and a novel data augmentation pipeline. This pipeline leverages image-to-video diffusion, in/outpainting & negatives to create synthetic training data, addressing limitations of real-world data collection for this task. Our method improves the quality and diversity of generated images by disentangling product representations and enhancing the model's understanding of product characteristics. Evaluation on the ABO dataset and a private product dataset, using automated metrics and human assessment, demonstrates the effectiveness of our framework in generating realistic and compelling product visualizations, with implications for applications such as e-commerce and virtual product showcasing."
+    },
+    {
+      "self_ref": "#/texts/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "footnote",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 119.822,
+            "t": 91.92770080000003,
+            "r": 366.2766320000001,
+            "b": 82.17638450973448,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            61
+          ]
+        }
+      ],
+      "orig": "\u2217Correspondence to imalhi@google.com, praneetdutta@google.com",
+      "text": "\u2217Correspondence to imalhi@google.com, praneetdutta@google.com"
+    },
+    {
+      "self_ref": "#/texts/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "footnote",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 120.21000000000001,
+            "t": 80.97870079999996,
+            "r": 191.1269744000001,
+            "b": 71.22738450973452,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            16
+          ]
+        }
+      ],
+      "orig": "\u2020Google DeepMind",
+      "text": "\u2020Google DeepMind"
+    },
+    {
+      "self_ref": "#/texts/10",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "footnote",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 120.21000000000001,
+            "t": 70.0297008,
+            "r": 150.53608160000005,
+            "b": 60.278384509734565,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            7
+          ]
+        }
+      ],
+      "orig": "\u2021Google",
+      "text": "\u2021Google"
+    },
+    {
+      "self_ref": "#/texts/11",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 303.136,
+            "t": 38.73565259999998,
+            "r": 308.1173,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "1",
+      "text": "1"
+    },
+    {
+      "self_ref": "#/texts/12",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 108.299,
+            "t": 707.9588352000001,
+            "r": 205.98885179999994,
+            "b": 697.696512679646,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            14
+          ]
+        }
+      ],
+      "orig": "1 INTRODUCTION",
+      "text": "1 INTRODUCTION",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/13",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 107.641,
+            "t": 680.1766526,
+            "r": 505.2471183839989,
+            "b": 551.0767743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1112
+          ]
+        }
+      ],
+      "orig": "Placing products seamlessly into new environments in images holds immense value for e-commerce, VR/AR, content creation among others. Photorealistic recontextualization demands both visual appeal and, crucially, accurate product detail preservation. The most common method that preserves product details, namely background swapping, does not provide realistic product relighting, novel perspectives, or natural occlusions. These shortcomings heavily limit how natural-looking and creative the resulting images can be. While recent advancements in text-to-image diffusion models such as DreamBooth (Ruiz et al., 2023) and InstructPix2Pix (Brooks et al., 2023) offer promise, directly applying them to diverse product images often compromises fidelity. We observe that these existing methods struggle with intricate details, consistent appearance, and product background disentanglement, especially when dealing with complex textures, reflections, and occlusions in the product images. Scaling to a wide variety of products amplifies these failure modes, motivating the need for a new recontextualization approach.",
+      "text": "Placing products seamlessly into new environments in images holds immense value for e-commerce, VR/AR, content creation among others. Photorealistic recontextualization demands both visual appeal and, crucially, accurate product detail preservation. The most common method that preserves product details, namely background swapping, does not provide realistic product relighting, novel perspectives, or natural occlusions. These shortcomings heavily limit how natural-looking and creative the resulting images can be. While recent advancements in text-to-image diffusion models such as DreamBooth (Ruiz et al., 2023) and InstructPix2Pix (Brooks et al., 2023) offer promise, directly applying them to diverse product images often compromises fidelity. We observe that these existing methods struggle with intricate details, consistent appearance, and product background disentanglement, especially when dealing with complex textures, reflections, and occlusions in the product images. Scaling to a wide variety of products amplifies these failure modes, motivating the need for a new recontextualization approach."
+    },
+    {
+      "self_ref": "#/texts/14",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 107.532,
+            "t": 542.6916526,
+            "r": 505.6530376559991,
+            "b": 490.3047743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            450
+          ]
+        }
+      ],
+      "orig": "We present a novel framework specifically designed to address these limitations and achieve highfidelity product recontextualization across a wide variety of products. Compared with background replacement and other methods, our system not only preserves product details at scale, but also enables the three capabilities key to blending products seamlessly into new settings: 1) realistic relighting; 2) object occlusions; 3) novel product viewpoints.",
+      "text": "We present a novel framework specifically designed to address these limitations and achieve highfidelity product recontextualization across a wide variety of products. Compared with background replacement and other methods, our system not only preserves product details at scale, but also enables the three capabilities key to blending products seamlessly into new settings: 1) realistic relighting; 2) object occlusions; 3) novel product viewpoints."
+    },
+    {
+      "self_ref": "#/texts/15",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 108.299,
+            "t": 466.5558352,
+            "r": 172.8109394,
+            "b": 456.29351267964597,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            8
+          ]
+        }
+      ],
+      "orig": "2 METHOD",
+      "text": "2 METHOD",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/16",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 107.641,
+            "t": 438.77465259999997,
+            "r": 505.6574181023999,
+            "b": 364.46877439292035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            604
+          ]
+        }
+      ],
+      "orig": "Existing methods (Ruiz et al., 2023) (Gal et al., 2022) that perform well on subject driven personalization commonly use few shot samples of the product. While simply collecting more samples would improve product fidelity as shown in (Ruiz et al., 2023), it's not feasible to do so at scale. Instead, we propose augmenting the existing few shot samples through synthetic augmentation to address common failure modes, and finetune the model using LoRA (Hu et al., 2021), in a similar setup to DreamBooth (Ruiz et al., 2023). This method provides simplicity and scalability for a large variety of products.",
+      "text": "Existing methods (Ruiz et al., 2023) (Gal et al., 2022) that perform well on subject driven personalization commonly use few shot samples of the product. While simply collecting more samples would improve product fidelity as shown in (Ruiz et al., 2023), it's not feasible to do so at scale. Instead, we propose augmenting the existing few shot samples through synthetic augmentation to address common failure modes, and finetune the model using LoRA (Hu et al., 2021), in a similar setup to DreamBooth (Ruiz et al., 2023). This method provides simplicity and scalability for a large variety of products."
+    },
+    {
+      "self_ref": "#/texts/17",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 108.249,
+            "t": 343.3086526,
+            "r": 279.8917500999999,
+            "b": 334.75677439292036,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            31
+          ]
+        }
+      ],
+      "orig": "2.1 SYNTHETIC DATA AUGMENTATION",
+      "text": "2.1 SYNTHETIC DATA AUGMENTATION",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/18",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 108.0,
+            "t": 320.9036526,
+            "r": 505.7425086689997,
+            "b": 279.4747743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            387
+          ]
+        }
+      ],
+      "orig": "Our method addresses the limitations of existing methods by augmenting the training data with synthetically generated examples. We employ a data pipeline consisting of novel view generation, background/object disentanglement, and the inclusion of negative examples (Visualization of the pipeline in Appendix A.2.1). Each stage targets specific failure modes observed in existing methods.",
+      "text": "Our method addresses the limitations of existing methods by augmenting the training data with synthetically generated examples. We employ a data pipeline consisting of novel view generation, background/object disentanglement, and the inclusion of negative examples (Visualization of the pipeline in Appendix A.2.1). Each stage targets specific failure modes observed in existing methods."
+    },
+    {
+      "self_ref": "#/texts/19",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 108.249,
+            "t": 259.6596526000001,
+            "r": 256.6655202999999,
+            "b": 251.10777439292042,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "2.1.1 NOVEL VIEW GENERATION",
+      "text": "2.1.1 NOVEL VIEW GENERATION",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/20",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 107.641,
+            "t": 238.5996526,
+            "r": 504.0004882833993,
+            "b": 175.2527743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            532
+          ]
+        }
+      ],
+      "orig": "Increasing the number of input images improves fidelity (Ruiz et al., 2023), but simple repetition leads to overfitting. We generate novel viewpoints using image-to-video diffusion models (Bar-Tal et al., 2024), augmenting the training data with diverse product perspectives (Appendix A.1 Table 2). While 3D reconstruction models (Barron et al., 2023; Hong et al., 2023) offer an alternative, we prioritize video frame interpolation for better prompt adherence and product fidelity. Figure 2 in Appendix A.1 demonstrates an example.",
+      "text": "Increasing the number of input images improves fidelity (Ruiz et al., 2023), but simple repetition leads to overfitting. We generate novel viewpoints using image-to-video diffusion models (Bar-Tal et al., 2024), augmenting the training data with diverse product perspectives (Appendix A.1 Table 2). While 3D reconstruction models (Barron et al., 2023; Hong et al., 2023) offer an alternative, we prioritize video frame interpolation for better prompt adherence and product fidelity. Figure 2 in Appendix A.1 demonstrates an example."
+    },
+    {
+      "self_ref": "#/texts/21",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 108.24900000000001,
+            "t": 155.43765259999998,
+            "r": 242.00216069999996,
+            "b": 146.88577439292033,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "2.1.2 NEW CONTEXT IMAGES",
+      "text": "2.1.2 NEW CONTEXT IMAGES",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/22",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 107.641,
+            "t": 134.37765260000003,
+            "r": 505.7385037038004,
+            "b": 60.07177439292036,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            602
+          ]
+        }
+      ],
+      "orig": "To reduce overfitting to the background elements in input images, we used masked outpainting to change the backgrounds of the base, and novel view images. These images serve as positives while helping disentangle the product from the backgrounds during finetuning. We used an LLM to generate new prompts for each image, then created a segmentation mask using (Kirillov et al., 2023). The mask and new context prompt was used to outpaint the image to change the background. To reduce hallucinations we curate and cache the context prompts. The caching strategy is described in Appendix subsection A.2.2.",
+      "text": "To reduce overfitting to the background elements in input images, we used masked outpainting to change the backgrounds of the base, and novel view images. These images serve as positives while helping disentangle the product from the backgrounds during finetuning. We used an LLM to generate new prompts for each image, then created a segmentation mask using (Kirillov et al., 2023). The mask and new context prompt was used to outpaint the image to change the background. To reduce hallucinations we curate and cache the context prompts. The caching strategy is described in Appendix subsection A.2.2."
+    },
+    {
+      "self_ref": "#/texts/23",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 2,
+          "bbox": {
+            "l": 303.509,
+            "t": 38.73565259999998,
+            "r": 308.4903,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "2",
+      "text": "2"
+    },
+    {
+      "self_ref": "#/texts/24",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 108.249,
+            "t": 706.6616526,
+            "r": 261.8262808,
+            "b": 698.1097743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            28
+          ]
+        }
+      ],
+      "orig": "2.1.3 AUGMENT WITH NEGATIVES",
+      "text": "2.1.3 AUGMENT WITH NEGATIVES",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/25",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 107.532,
+            "t": 687.4496526,
+            "r": 504.66301114600026,
+            "b": 602.1857743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            778
+          ]
+        }
+      ],
+      "orig": "While (Ruiz et al., 2023) uses a class prior preservation loss, we observed that adding negative images has a similar effect. We additionally added counterfactuals - images with the same background as the ground truth images, but with different objects inpainted into the product's masked region. We observed this gave the following benefits: (1) preserve class priors in the base generation model, (2) accurately render non-product objects in the background/foreground (3) render products with reduced artifacts in the image. To generate a negative image we took the caption of a fine tuning image, and generated a new image using the base diffusion model. We observe that a 2:1 positive:negative image ratio produced higher image quality and fidelity at the cost of diversity.",
+      "text": "While (Ruiz et al., 2023) uses a class prior preservation loss, we observed that adding negative images has a similar effect. We additionally added counterfactuals - images with the same background as the ground truth images, but with different objects inpainted into the product's masked region. We observed this gave the following benefits: (1) preserve class priors in the base generation model, (2) accurately render non-product objects in the background/foreground (3) render products with reduced artifacts in the image. To generate a negative image we took the caption of a fine tuning image, and generated a new image using the base diffusion model. We observe that a 2:1 positive:negative image ratio produced higher image quality and fidelity at the cost of diversity."
+    },
+    {
+      "self_ref": "#/texts/26",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 108.249,
+            "t": 585.6486526,
+            "r": 186.62148369999989,
+            "b": 577.0967743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            14
+          ]
+        }
+      ],
+      "orig": "2.2 CAPTIONING",
+      "text": "2.2 CAPTIONING",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/27",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 107.532,
+            "t": 565.0926526,
+            "r": 504.00238117740014,
+            "b": 523.6647743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            404
+          ]
+        }
+      ],
+      "orig": "We used an internally trained captioning model based on a Vision Language Model (VLM) (Team et al., 2023) that is provided the base set of images with an instruction asking for fine grained details of the image, including various attributes like color, position, lighting, and other fine grained product details. We found that fine grained captioning greatly improves subject recontextualization quality.",
+      "text": "We used an internally trained captioning model based on a Vision Language Model (VLM) (Team et al., 2023) that is provided the base set of images with an instruction asking for fine grained details of the image, including various attributes like color, position, lighting, and other fine grained product details. We found that fine grained captioning greatly improves subject recontextualization quality."
+    },
+    {
+      "self_ref": "#/texts/28",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 108.249,
+            "t": 507.1276526,
+            "r": 249.87496509999994,
+            "b": 498.5757743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "2.3 TRAINING DATA FILTERING",
+      "text": "2.3 TRAINING DATA FILTERING",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/29",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 107.253,
+            "t": 486.5716526,
+            "r": 505.2459826475999,
+            "b": 390.3477743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            859
+          ]
+        }
+      ],
+      "orig": "While generating data using the approaches mentioned above greatly increases the amount of samples, some images may be higher quality than others. For example, it is possible for outpainting to produce hallucinations that extend the products or add new attributes. We developed techniques to reduce errors from outpainting in two ways to improve the quality of our finetuning training set. Particularly, 1) Use automated metrics to evaluate each additional outpainted image and sample the highest rated images. Specifically, we use CLIP (Radford et al., 2021) (both CLIP-I and CLIP-T) as well as segmented CLIP Embedding for metrics; and 2) Compare the segmentation mask of the outpainted image and the reference image, and filter out outpainted images whose IoUs (Intersection over Unions) for the two masks fall below an experimentally determined threshold.",
+      "text": "While generating data using the approaches mentioned above greatly increases the amount of samples, some images may be higher quality than others. For example, it is possible for outpainting to produce hallucinations that extend the products or add new attributes. We developed techniques to reduce errors from outpainting in two ways to improve the quality of our finetuning training set. Particularly, 1) Use automated metrics to evaluate each additional outpainted image and sample the highest rated images. Specifically, we use CLIP (Radford et al., 2021) (both CLIP-I and CLIP-T) as well as segmented CLIP Embedding for metrics; and 2) Compare the segmentation mask of the outpainted image and the reference image, and filter out outpainted images whose IoUs (Intersection over Unions) for the two masks fall below an experimentally determined threshold."
+    },
+    {
+      "self_ref": "#/texts/30",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 108.249,
+            "t": 373.81165259999995,
+            "r": 221.0118391999999,
+            "b": 365.2597743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            20
+          ]
+        }
+      ],
+      "orig": "2.4 MODEL FINETUNING",
+      "text": "2.4 MODEL FINETUNING",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/31",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 107.532,
+            "t": 353.25565259999996,
+            "r": 505.74716120320005,
+            "b": 278.9497743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            657
+          ]
+        }
+      ],
+      "orig": "We chose to adopt the approach described in (Ruiz et al., 2023), with three adjustments: Class prior preservation loss is omitted in favor of more negatives during finetuning, we trained on a higher learning rate and for longer and we swept over possible synthetic tokens to be used for each product. We observed that some tokens perform significantly better than the others. Tokens that can be confused as product names are avoided and we chose to sample from an existing list of rare tokens that have plausible association with the product being finetuned. We find that using LoRA finetuning produced better results compared to finetuning the whole model.",
+      "text": "We chose to adopt the approach described in (Ruiz et al., 2023), with three adjustments: Class prior preservation loss is omitted in favor of more negatives during finetuning, we trained on a higher learning rate and for longer and we swept over possible synthetic tokens to be used for each product. We observed that some tokens perform significantly better than the others. Tokens that can be confused as product names are avoided and we chose to sample from an existing list of rare tokens that have plausible association with the product being finetuned. We find that using LoRA finetuning produced better results compared to finetuning the whole model."
+    },
+    {
+      "self_ref": "#/texts/32",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 108.249,
+            "t": 262.4126526,
+            "r": 255.02286519999993,
+            "b": 253.86077439292035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            27
+          ]
+        }
+      ],
+      "orig": "2.5 POST FINETUNING RANKING",
+      "text": "2.5 POST FINETUNING RANKING",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/33",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 107.532,
+            "t": 241.85665259999996,
+            "r": 504.3437527639997,
+            "b": 178.51077439292033,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            589
+          ]
+        }
+      ],
+      "orig": "We re-use the evaluation metrics for images to rank and pick the top N images above an experimentally determined threshold. We use CLIP-T, CLIP-I, DINO (Caron et al., 2021) embeddings to rank images on product fidelity. We pick the top N images per product after ranking them by the aggregate sum of these metrics. This leads to a relative 30.9% increase in image pass rate. Our analysis also showed a 0.4 Pearson correlation between these automatic metrics and human ratings. As a future direction, a ranking/classification model can be learned to maximize correlation with human ratings.",
+      "text": "We re-use the evaluation metrics for images to rank and pick the top N images above an experimentally determined threshold. We use CLIP-T, CLIP-I, DINO (Caron et al., 2021) embeddings to rank images on product fidelity. We pick the top N images per product after ranking them by the aggregate sum of these metrics. This leads to a relative 30.9% increase in image pass rate. Our analysis also showed a 0.4 Pearson correlation between these automatic metrics and human ratings. As a future direction, a ranking/classification model can be learned to maximize correlation with human ratings."
+    },
+    {
+      "self_ref": "#/texts/34",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 108.299,
+            "t": 159.3848352,
+            "r": 172.53840030000003,
+            "b": 149.12251267964598,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            9
+          ]
+        }
+      ],
+      "orig": "3 RESULTS",
+      "text": "3 RESULTS",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/35",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 107.532,
+            "t": 134.37765260000003,
+            "r": 504.66937038240064,
+            "b": 60.07177439292036,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            614
+          ]
+        }
+      ],
+      "orig": "We evaluated our proposed framework on the Amazon Berkeley Objects (ABO) (Collins et al., 2022) dataset, creating a challenging dataset due to its diverse range of product categories and complex background scenes. We also used a private set of consumer products, similar to the ABO dataset in it's difficulty and range of product types. We quantitatively assess the fidelity of our generated images using established metrics, including CLIP and DINO based image similarity scores. We also conduct a qualitative analysis through human evaluation, comparing our approach to an existing baseline of DreamBooth + LoRA.",
+      "text": "We evaluated our proposed framework on the Amazon Berkeley Objects (ABO) (Collins et al., 2022) dataset, creating a challenging dataset due to its diverse range of product categories and complex background scenes. We also used a private set of consumer products, similar to the ABO dataset in it's difficulty and range of product types. We quantitatively assess the fidelity of our generated images using established metrics, including CLIP and DINO based image similarity scores. We also conduct a qualitative analysis through human evaluation, comparing our approach to an existing baseline of DreamBooth + LoRA."
+    },
+    {
+      "self_ref": "#/texts/36",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 3,
+          "bbox": {
+            "l": 303.509,
+            "t": 38.73565259999998,
+            "r": 308.4903,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "3",
+      "text": "3"
+    },
+    {
+      "self_ref": "#/texts/37",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 108.249,
+            "t": 706.6616526,
+            "r": 229.79124959999982,
+            "b": 698.1097743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            23
+          ]
+        }
+      ],
+      "orig": "3.1 QUALITATIVE RESULTS",
+      "text": "3.1 QUALITATIVE RESULTS",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/38",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 107.532,
+            "t": 678.7286526,
+            "r": 505.74504913199894,
+            "b": 582.5057743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            819
+          ]
+        }
+      ],
+      "orig": "We showcase results on products in the ABO dataset in Figure 6. Our method preserves the product details with high fidelity while seamlessly integrating the product into a realistic lifestyle scene. We observe that the generated images exhibit diverse and plausible arrangements of furniture and decor, consistent with the provided prompt. Our method is able to achieve the following (1) object occlusions, (2) novel view generation and (3) varied realistic lighting conditions, particularly foreground relighting. In Figure 6 we demonstrate the high quality scene composition of the method, and exemplify its advantage over background replacement systems, which do not exhibit these features. We also showcase additional qualitative results from ablation studies focusing on LoRA rank and training steps in section A.5",
+      "text": "We showcase results on products in the ABO dataset in Figure 6. Our method preserves the product details with high fidelity while seamlessly integrating the product into a realistic lifestyle scene. We observe that the generated images exhibit diverse and plausible arrangements of furniture and decor, consistent with the provided prompt. Our method is able to achieve the following (1) object occlusions, (2) novel view generation and (3) varied realistic lighting conditions, particularly foreground relighting. In Figure 6 we demonstrate the high quality scene composition of the method, and exemplify its advantage over background replacement systems, which do not exhibit these features. We also showcase additional qualitative results from ablation studies focusing on LoRA rank and training steps in section A.5"
+    },
+    {
+      "self_ref": "#/texts/39",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 108.249,
+            "t": 547.5286526,
+            "r": 237.36789829999992,
+            "b": 538.9767743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            24
+          ]
+        }
+      ],
+      "orig": "3.2 QUANTITATIVE RESULTS",
+      "text": "3.2 QUANTITATIVE RESULTS",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/40",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 107.532,
+            "t": 519.5956526,
+            "r": 505.24578649320034,
+            "b": 467.2087743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            475
+          ]
+        }
+      ],
+      "orig": "We provide human evaluation results as well as automated metrics on our approach. For evaluation, we selected a closed set of real world objects distinct from the ABO dataset. A small closed set of 100 products were used to account for the cost of human evaluation, reduce any effects of data contamination and demonstrate the generality of our approach to other object datasets. We compare our method to a baseline of using just the method from (Ruiz et al., 2023) and LoRA.",
+      "text": "We provide human evaluation results as well as automated metrics on our approach. For evaluation, we selected a closed set of real world objects distinct from the ABO dataset. A small closed set of 100 products were used to account for the cost of human evaluation, reduce any effects of data contamination and demonstrate the generality of our approach to other object datasets. We compare our method to a baseline of using just the method from (Ruiz et al., 2023) and LoRA."
+    },
+    {
+      "self_ref": "#/texts/41",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 108.249,
+            "t": 433.57565259999996,
+            "r": 273.36289830000004,
+            "b": 425.0237743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            30
+          ]
+        }
+      ],
+      "orig": "3.2.1 HUMAN EVALUATION RESULTS",
+      "text": "3.2.1 HUMAN EVALUATION RESULTS",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/42",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 107.671,
+            "t": 406.98865259999997,
+            "r": 504.16614133599927,
+            "b": 343.64177439292035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            579
+          ]
+        }
+      ],
+      "orig": "For human evaluation, we showed raters the source and generated images and asked them to accept or reject the generated images. A series of 8 questions all needed to pass and we took a majority vote over 3 raters (Additional details in Appendix A.3). We report the pass rate per image, and per product (defined as the % of products with at least one passing image). Human evaluations show that our method performs significantly better than a baseline method of DreamBooth + LoRA (Rank=64) on a closed evaluation set of various furniture products. Results are reported in Table 1.",
+      "text": "For human evaluation, we showed raters the source and generated images and asked them to accept or reject the generated images. A series of 8 questions all needed to pass and we took a majority vote over 3 raters (Additional details in Appendix A.3). We report the pass rate per image, and per product (defined as the % of products with at least one passing image). Human evaluations show that our method performs significantly better than a baseline method of DreamBooth + LoRA (Rank=64) on a closed evaluation set of various furniture products. Results are reported in Table 1."
+    },
+    {
+      "self_ref": "#/texts/43",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 107.691,
+            "t": 248.64065260000007,
+            "r": 503.9990437079997,
+            "b": 218.1707743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            282
+          ]
+        }
+      ],
+      "orig": "Table 1: Human Evaluation results on multiple datasets created by mixing several product types in a closed evaluation set. Due to variations in generation, we see that per product pass rate is often much higher than the per image pass rate, demonstrating the difficulty of the task.",
+      "text": "Table 1: Human Evaluation results on multiple datasets created by mixing several product types in a closed evaluation set. Due to variations in generation, we see that per product pass rate is often much higher than the per image pass rate, demonstrating the difficulty of the task."
+    },
+    {
+      "self_ref": "#/texts/44",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 108.249,
+            "t": 160.96465260000002,
+            "r": 292.6997853000001,
+            "b": 152.41277439292037,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            34
+          ]
+        }
+      ],
+      "orig": "3.2.2 AUTOMATIC EVALUATION METRICS",
+      "text": "3.2.2 AUTOMATIC EVALUATION METRICS",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/45",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 108.0,
+            "t": 134.37765260000003,
+            "r": 504.3437895168004,
+            "b": 60.07177439292036,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            621
+          ]
+        }
+      ],
+      "orig": "Due to the cost of human evaluation, we also evaluated our method using automatically computed metrics (Table 2). Following (Ruiz et al., 2023) we use the CLIP-I and DINO metrics to compare generated images against the reference images to evaluate product fidelity. We also used CLIP-T to evaluate text alignment as from (Ruiz et al., 2023). We also used SegCLIP-I (and Segmented DINO) for more localized cosine similarity as suggested in (Zhu et al., 2024). We achieved consistent performance on metrics on the ABO dataset and our private evaluation set, demonstrating the ability to scale to a wide variety of products.",
+      "text": "Due to the cost of human evaluation, we also evaluated our method using automatically computed metrics (Table 2). Following (Ruiz et al., 2023) we use the CLIP-I and DINO metrics to compare generated images against the reference images to evaluate product fidelity. We also used CLIP-T to evaluate text alignment as from (Ruiz et al., 2023). We also used SegCLIP-I (and Segmented DINO) for more localized cosine similarity as suggested in (Zhu et al., 2024). We achieved consistent performance on metrics on the ABO dataset and our private evaluation set, demonstrating the ability to scale to a wide variety of products."
+    },
+    {
+      "self_ref": "#/texts/46",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 303.33500000000004,
+            "t": 38.73565259999998,
+            "r": 308.3163,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "4",
+      "text": "4"
+    },
+    {
+      "self_ref": "#/texts/47",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 107.691,
+            "t": 610.7706526,
+            "r": 504.0040449315997,
+            "b": 580.3017743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            287
+          ]
+        }
+      ],
+      "orig": "Table 2: Image and Text alignment metrics for our process on ABO dataset and a private evaluation set. The segmented metrics are higher than the non-segmented versions, indicating that the products in reference and generated images are similar, while the background of the images varies.",
+      "text": "Table 2: Image and Text alignment metrics for our process on ABO dataset and a private evaluation set. The segmented metrics are higher than the non-segmented versions, indicating that the products in reference and generated images are similar, while the background of the images varies."
+    },
+    {
+      "self_ref": "#/texts/48",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 108.299,
+            "t": 555.6508352000001,
+            "r": 195.37747109999992,
+            "b": 545.388512679646,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            12
+          ]
+        }
+      ],
+      "orig": "4 CONCLUSION",
+      "text": "4 CONCLUSION",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/49",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 107.532,
+            "t": 530.9936526,
+            "r": 505.65194176999967,
+            "b": 489.5647743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            358
+          ]
+        }
+      ],
+      "orig": "We demonstrate an improved data pipeline and an alternate strategy to subject driven generation, particularly for product recontextualization, to millions of products at scale. Experimental observations and human evaluation show that our method performs significantly better than existing approaches while requiring no model surgery and expensive finetuning.",
+      "text": "We demonstrate an improved data pipeline and an alternate strategy to subject driven generation, particularly for product recontextualization, to millions of products at scale. Experimental observations and human evaluation show that our method performs significantly better than existing approaches while requiring no model surgery and expensive finetuning."
+    },
+    {
+      "self_ref": "#/texts/50",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 303.509,
+            "t": 38.73565259999998,
+            "r": 308.4903,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "5",
+      "text": "5"
+    },
+    {
+      "self_ref": "#/texts/51",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 6,
+          "bbox": {
+            "l": 303.509,
+            "t": 38.73565259999998,
+            "r": 308.4903,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "6",
+      "text": "6"
+    },
+    {
+      "self_ref": "#/texts/52",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 108.299,
+            "t": 685.5428352,
+            "r": 329.1693225000001,
+            "b": 675.280512679646,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            34
+          ]
+        }
+      ],
+      "orig": "A APPENDIX / SUPPLEMENTAL MATERIAL",
+      "text": "A APPENDIX / SUPPLEMENTAL MATERIAL",
+      "level": 1
+    },
+    {
+      "self_ref": "#/texts/53",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 108.24900000000004,
+            "t": 660.5836525999999,
+            "r": 314.63311500000003,
+            "b": 652.0317743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            37
+          ]
+        }
+      ],
+      "orig": "A.1 SYNTHETIC AUGMENTATION TECHNIQUES",
+      "text": "A.1 SYNTHETIC AUGMENTATION TECHNIQUES",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/54",
+      "parent": {
+        "$ref": "#/pictures/1"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 107.751,
+            "t": 540.7366526,
+            "r": 503.9992828088003,
+            "b": 521.2257743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            104
+          ]
+        }
+      ],
+      "orig": "Figure 2: Novel view generated using image-to-video diffusion. Left: Input image. Right: Generated view.",
+      "text": "Figure 2: Novel view generated using image-to-video diffusion. Left: Input image. Right: Generated view."
+    },
+    {
+      "self_ref": "#/texts/55",
+      "parent": {
+        "$ref": "#/pictures/2"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 107.99999999999994,
+            "t": 344.3966526,
+            "r": 504.0013948799996,
+            "b": 324.8857743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            128
+          ]
+        }
+      ],
+      "orig": "Figure 3: Samples of image positives for a given table, along with it's object mask used for background replacement/outpainting.",
+      "text": "Figure 3: Samples of image positives for a given table, along with it's object mask used for background replacement/outpainting."
+    },
+    {
+      "self_ref": "#/texts/56",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 303.38499999999993,
+            "t": 38.73565259999998,
+            "r": 308.3662999999999,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "7",
+      "text": "7"
+    },
+    {
+      "self_ref": "#/texts/57",
+      "parent": {
+        "$ref": "#/pictures/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 107.70399999999994,
+            "t": 461.2941264,
+            "r": 504.00462342399936,
+            "b": 443.63538450973454,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            180
+          ]
+        }
+      ],
+      "orig": "(a) Samples of image negatives for a dining table. Left most is the original unmodified image, while the rest are in-class negatives. The prompts used are described in Appendix A.4",
+      "text": "(a) Samples of image negatives for a dining table. Left most is the original unmodified image, while the rest are in-class negatives. The prompts used are described in Appendix A.4"
+    },
+    {
+      "self_ref": "#/texts/58",
+      "parent": {
+        "$ref": "#/groups/3"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "list_item",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 159.75499999999994,
+            "t": 194.7601264,
+            "r": 451.9520431999998,
+            "b": 187.06338450973453,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            82
+          ]
+        }
+      ],
+      "orig": "(b) The process for creating counterfactuals and negatives from a starting sample.",
+      "text": "(b) The process for creating counterfactuals and negatives from a starting sample.",
+      "enumerated": false,
+      "marker": ""
+    },
+    {
+      "self_ref": "#/texts/59",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 137.26399999999995,
+            "t": 174.78565260000005,
+            "r": 474.7371123999996,
+            "b": 166.2337743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            82
+          ]
+        }
+      ],
+      "orig": "Figure 4: Samples of counterfactuals and negatives used to augment product images.",
+      "text": "Figure 4: Samples of counterfactuals and negatives used to augment product images."
+    },
+    {
+      "self_ref": "#/texts/60",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 303.50899999999996,
+            "t": 38.73565259999998,
+            "r": 308.49029999999993,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "8",
+      "text": "8"
+    },
+    {
+      "self_ref": "#/texts/61",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 108.249,
+            "t": 706.6616526,
+            "r": 246.85779199999993,
+            "b": 698.1097743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            25
+          ]
+        }
+      ],
+      "orig": "A.2 SYSTEM DESIGN CHOICES",
+      "text": "A.2 SYSTEM DESIGN CHOICES",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/62",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 108.24900000000001,
+            "t": 686.1386526,
+            "r": 264.7570047,
+            "b": 677.5867743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            30
+          ]
+        }
+      ],
+      "orig": "A.2.1 FINETUNING DATA PIPELINE",
+      "text": "A.2.1 FINETUNING DATA PIPELINE",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/63",
+      "parent": {
+        "$ref": "#/pictures/5"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 151.302,
+            "t": 553.9216526,
+            "r": 460.7005055999996,
+            "b": 545.3697743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            79
+          ]
+        }
+      ],
+      "orig": "Figure 5: Figure illustrating our scalable finetuning data generation approach.",
+      "text": "Figure 5: Figure illustrating our scalable finetuning data generation approach."
+    },
+    {
+      "self_ref": "#/texts/64",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 108.249,
+            "t": 521.0846526,
+            "r": 270.618327,
+            "b": 512.5327743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            29
+          ]
+        }
+      ],
+      "orig": "A.2.2 CACHING CONTEXT PROMPTS",
+      "text": "A.2.2 CACHING CONTEXT PROMPTS",
+      "level": 3
+    },
+    {
+      "self_ref": "#/texts/65",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 108.0,
+            "t": 501.9066526,
+            "r": 504.0013948799995,
+            "b": 449.5187743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            427
+          ]
+        }
+      ],
+      "orig": "Creating context prompts to generate images on the fly, and at scale can be prohibitively expensive and difficult to control for quality. Moreover, while outpainting resulted in novel background images for the same product, generating new prompts for each image was prone to hallucinations. To address this issue, we cached context prompts before running the data pipeline and curated the prompts to remove unrealistic prompts.",
+      "text": "Creating context prompts to generate images on the fly, and at scale can be prohibitively expensive and difficult to control for quality. Moreover, while outpainting resulted in novel background images for the same product, generating new prompts for each image was prone to hallucinations. To address this issue, we cached context prompts before running the data pipeline and curated the prompts to remove unrealistic prompts."
+    },
+    {
+      "self_ref": "#/texts/66",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 107.671,
+            "t": 441.1346526,
+            "r": 505.2429739439989,
+            "b": 366.8287743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            693
+          ]
+        }
+      ],
+      "orig": "To solve these issues, we instead do the following: for each type of product (chairs, phone cases, etc), we generate many possible context prompts using an LLM, and save these prompts in an offline file. We refer to this as a cached \"prompt bank\". For each individual product, we classify the type of product (either as part of product details available in the dataset metadata or using a VLM), and retrieve prompts from the prompt bank. We then use these prompts for synthetic data augmentations (e.g outpainting) and generating target generation prompts. Using the prompt bank allows us to save compute and improve our prompts over time, while still producing novel contexts for the product.",
+      "text": "To solve these issues, we instead do the following: for each type of product (chairs, phone cases, etc), we generate many possible context prompts using an LLM, and save these prompts in an offline file. We refer to this as a cached \"prompt bank\". For each individual product, we classify the type of product (either as part of product details available in the dataset metadata or using a VLM), and retrieve prompts from the prompt bank. We then use these prompts for synthetic data augmentations (e.g outpainting) and generating target generation prompts. Using the prompt bank allows us to save compute and improve our prompts over time, while still producing novel contexts for the product."
+    },
+    {
+      "self_ref": "#/texts/67",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 303.509,
+            "t": 38.73565259999998,
+            "r": 308.4903,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            1
+          ]
+        }
+      ],
+      "orig": "9",
+      "text": "9"
+    },
+    {
+      "self_ref": "#/texts/68",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 108.249,
+            "t": 706.6616526,
+            "r": 279.5860754999998,
+            "b": 698.1097743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            31
+          ]
+        }
+      ],
+      "orig": "A.3 HUMAN EVALUATION GUIDELINES",
+      "text": "A.3 HUMAN EVALUATION GUIDELINES",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/69",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 107.751,
+            "t": 686.1386526,
+            "r": 505.247118383999,
+            "b": 622.7917743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            566
+          ]
+        }
+      ],
+      "orig": "Human evaluation guidelines focused on a fine grained evaluation across multiple categories and failure modes. Particularly, 8 questions were posed to human evaluators on a 4 point scale (yes, maybe, no, unclear) - focusing on product fidelity, logo generation fidelity, realistic product use, product size, presence of background/foreground hallucinations, product placement, image safety and likelihood to use the image as a business owner. A 'yes' was considered a pass, and a majority vote over 3 human raters was taken to consider an image to pass human rating.",
+      "text": "Human evaluation guidelines focused on a fine grained evaluation across multiple categories and failure modes. Particularly, 8 questions were posed to human evaluators on a 4 point scale (yes, maybe, no, unclear) - focusing on product fidelity, logo generation fidelity, realistic product use, product size, presence of background/foreground hallucinations, product placement, image safety and likelihood to use the image as a business owner. A 'yes' was considered a pass, and a majority vote over 3 human raters was taken to consider an image to pass human rating."
+    },
+    {
+      "self_ref": "#/texts/70",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 108.24900000000001,
+            "t": 606.3376526,
+            "r": 228.47382419999985,
+            "b": 597.7857743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            21
+          ]
+        }
+      ],
+      "orig": "A.4 GENERATED SAMPLES",
+      "text": "A.4 GENERATED SAMPLES",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/71",
+      "parent": {
+        "$ref": "#/pictures/6"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 108.0,
+            "t": 174.2006526,
+            "r": 505.65593367499946,
+            "b": 121.81277439292035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            459
+          ]
+        }
+      ],
+      "orig": "Figure 6: Recontextualization results on the ABO dataset, demonstrating high fidelity, object occlusions, novel perspectives, and realistic lighting. Object occlusions are present for the desk and table and all the products demonstrate novel view synthesis, where the angle the object is placed at in the generated images is different than the provided image. The chair highlights the ability of the model to apply realistic and diverse lighting on an object.",
+      "text": "Figure 6: Recontextualization results on the ABO dataset, demonstrating high fidelity, object occlusions, novel perspectives, and realistic lighting. Object occlusions are present for the desk and table and all the products demonstrate novel view synthesis, where the angle the object is placed at in the generated images is different than the provided image. The chair highlights the ability of the model to apply realistic and diverse lighting on an object."
+    },
+    {
+      "self_ref": "#/texts/72",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 300.645,
+            "t": 38.73565259999998,
+            "r": 310.60759999999993,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "10",
+      "text": "10"
+    },
+    {
+      "self_ref": "#/texts/73",
+      "parent": {
+        "$ref": "#/pictures/7"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 107.704,
+            "t": 524.8211264,
+            "r": 286.20117337600004,
+            "b": 497.19938450973456,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            133
+          ]
+        }
+      ],
+      "orig": "(a) \"A round table with a marble top, placed in a sun-drenched breakfast nook with wicker chairs and potted herbs on the windowsill.\"",
+      "text": "(a) \"A round table with a marble top, placed in a sun-drenched breakfast nook with wicker chairs and potted herbs on the windowsill.\""
+    },
+    {
+      "self_ref": "#/texts/74",
+      "parent": {
+        "$ref": "#/pictures/8"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 323.015,
+            "t": 524.8211264,
+            "r": 501.51217337599974,
+            "b": 497.19938450973456,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            147
+          ]
+        }
+      ],
+      "orig": "(b) \"An antique table with ornate carvings and claw feet, displayed in a grand dining room with a crystal chandelier and antique china on display.\"",
+      "text": "(b) \"An antique table with ornate carvings and claw feet, displayed in a grand dining room with a crystal chandelier and antique china on display.\""
+    },
+    {
+      "self_ref": "#/texts/75",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 186.046,
+            "t": 484.9216526,
+            "r": 425.9553705999998,
+            "b": 476.36977439292036,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            58
+          ]
+        }
+      ],
+      "orig": "Figure 7: Prompts used to generate model negative samples.",
+      "text": "Figure 7: Prompts used to generate model negative samples."
+    },
+    {
+      "self_ref": "#/texts/76",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "section_header",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 108.249,
+            "t": 451.7466526,
+            "r": 339.5728983000001,
+            "b": 443.19477439292035,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            42
+          ]
+        }
+      ],
+      "orig": "A.5 LORA RANK ABLATION QUALITATIVE RESULTS",
+      "text": "A.5 LORA RANK ABLATION QUALITATIVE RESULTS",
+      "level": 2
+    },
+    {
+      "self_ref": "#/texts/77",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 108.0,
+            "t": 431.2236526,
+            "r": 504.24547857999977,
+            "b": 367.8767743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            519
+          ]
+        }
+      ],
+      "orig": "In addition to the results above, we also showcase qualitative results from ablations on the LoRA rank used during fine tuning and number of training steps in Figure 8. We ran our process for the same set of input images of the desk and then finetune a model using LoRA rank=1 and rank=64. As shown in Figure 8, as both models were trained for more steps, they improved in the ability to generate an accurate depiction of the desk, and they both lost some amount of complexity and diversity in the scenes they generate.",
+      "text": "In addition to the results above, we also showcase qualitative results from ablations on the LoRA rank used during fine tuning and number of training steps in Figure 8. We ran our process for the same set of input images of the desk and then finetune a model using LoRA rank=1 and rank=64. As shown in Figure 8, as both models were trained for more steps, they improved in the ability to generate an accurate depiction of the desk, and they both lost some amount of complexity and diversity in the scenes they generate."
+    },
+    {
+      "self_ref": "#/texts/78",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 107.691,
+            "t": 359.4926526,
+            "r": 504.342713555999,
+            "b": 296.1457743929203,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            512
+          ]
+        }
+      ],
+      "orig": "The rank 1 model learned the appearance of the desk much quicker than rank 64 model (the samples display high product fidelity at 700 steps as opposed to 1800 steps 8). When trained for the same number of steps as the rank 64 model, the rank 1 model showed clear signs of overfitting, in some cases even recreating the training data regardless of the prompt given to the model. The rank 1 model also began to generate very simple scenes in step 700, even once it gained the ability to faithfully render the desk.",
+      "text": "The rank 1 model learned the appearance of the desk much quicker than rank 64 model (the samples display high product fidelity at 700 steps as opposed to 1800 steps 8). When trained for the same number of steps as the rank 64 model, the rank 1 model showed clear signs of overfitting, in some cases even recreating the training data regardless of the prompt given to the model. The rank 1 model also began to generate very simple scenes in step 700, even once it gained the ability to faithfully render the desk."
+    },
+    {
+      "self_ref": "#/texts/79",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 107.751,
+            "t": 287.7616526,
+            "r": 504.0026155415998,
+            "b": 224.41477439292032,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            578
+          ]
+        }
+      ],
+      "orig": "In contrast, the rank 64 model took much longer to learn the specifics of the desk's appearance, but once it did, we note that the model maintains the ability to generate diverse and realistic scenes much better than the rank 1 model. The scenes from the rank 64 model show the desk in more unique viewpoints and in more complex environments, suggesting the rank 1 model lost this ability while it quickly learned the appearance of the desk. However, even the rank 64 model began to generate less diverse and more simple scenes over time as it learns the appearance of the desk.",
+      "text": "In contrast, the rank 64 model took much longer to learn the specifics of the desk's appearance, but once it did, we note that the model maintains the ability to generate diverse and realistic scenes much better than the rank 1 model. The scenes from the rank 64 model show the desk in more unique viewpoints and in more complex environments, suggesting the rank 1 model lost this ability while it quickly learned the appearance of the desk. However, even the rank 64 model began to generate less diverse and more simple scenes over time as it learns the appearance of the desk."
+    },
+    {
+      "self_ref": "#/texts/80",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "text",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 107.691,
+            "t": 216.03065259999994,
+            "r": 505.24343222199957,
+            "b": 163.6427743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            460
+          ]
+        }
+      ],
+      "orig": "This ablation demonstrates the trade off between product fidelity and generating realistic and diverse scenes. As such, choosing the optimal rank and training steps is equivalent to finding the balance point between product fidelity and generating diverse images. Using a higher LoRA rank allows the model to learn more slowly and better maintain its ability to generate complex and diverse scenes, making it easier to find the balance point for this tradeoff.",
+      "text": "This ablation demonstrates the trade off between product fidelity and generating realistic and diverse scenes. As such, choosing the optimal rank and training steps is equivalent to finding the balance point between product fidelity and generating diverse images. Using a higher LoRA rank allows the model to learn more slowly and better maintain its ability to generate complex and diverse scenes, making it easier to find the balance point for this tradeoff."
+    },
+    {
+      "self_ref": "#/texts/81",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 300.645,
+            "t": 38.73565259999998,
+            "r": 310.60759999999993,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "11",
+      "text": "11"
+    },
+    {
+      "self_ref": "#/texts/82",
+      "parent": {
+        "$ref": "#/pictures/9"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "caption",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 108.0,
+            "t": 231.66665260000002,
+            "r": 504.35287540799936,
+            "b": 168.3197743929204,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            586
+          ]
+        }
+      ],
+      "orig": "Figure 8: Recontextualization results for a desk with varied LoRA rank values and number of steps the model is trained for. These results showcase the tradeoff between object fidelity and generating novel and realistic scenes containing the products. LoRA rank 1 achieves high product fidelity in much fewer training steps but generates less diverse scenes, before eventually overfitting and beginning to reproduce training data regardless of prompt. LoRA rank 64 takes much longer to learn the product, but generates more varied scenes utilizing less common perspectives of the object.",
+      "text": "Figure 8: Recontextualization results for a desk with varied LoRA rank values and number of steps the model is trained for. These results showcase the tradeoff between object fidelity and generating novel and realistic scenes containing the products. LoRA rank 1 achieves high product fidelity in much fewer training steps but generates less diverse scenes, before eventually overfitting and beginning to reproduce training data regardless of prompt. LoRA rank 64 takes much longer to learn the product, but generates more varied scenes utilizing less common perspectives of the object."
+    },
+    {
+      "self_ref": "#/texts/83",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "furniture",
+      "label": "page_footer",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 300.645,
+            "t": 38.73565259999998,
+            "r": 310.60759999999993,
+            "b": 30.183774392920327,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            2
+          ]
+        }
+      ],
+      "orig": "12",
+      "text": "12"
+    }
+  ],
+  "pictures": [
+    {
+      "self_ref": "#/pictures/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/5"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 1,
+          "bbox": {
+            "l": 127.88685607910156,
+            "t": 556.5123748779297,
+            "r": 480.5207214355469,
+            "b": 338.1721496582031,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/5"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/54"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 227.39752197265625,
+            "t": 630.0749816894531,
+            "r": 381.6858215332031,
+            "b": 554.8391571044922,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/54"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/2",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/55"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 7,
+          "bbox": {
+            "l": 134.3148956298828,
+            "t": 489.7288818359375,
+            "r": 487.5683898925781,
+            "b": 355.9175720214844,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/55"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/3",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/57"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 135.35305786132812,
+            "t": 602.4176635742188,
+            "r": 487.4440002441406,
+            "b": 468.5657653808594,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/57"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/4",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 8,
+          "bbox": {
+            "l": 121.62943267822266,
+            "t": 435.37945556640625,
+            "r": 493.365478515625,
+            "b": 209.81414794921875,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/5",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/63"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 9,
+          "bbox": {
+            "l": 175.18885803222656,
+            "t": 661.6840362548828,
+            "r": 445.7880859375,
+            "b": 571.0729827880859,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/63"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/6",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/71"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 10,
+          "bbox": {
+            "l": 132.01336669921875,
+            "t": 572.9269409179688,
+            "r": 478.9948425292969,
+            "b": 200.21124267578125,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/71"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/7",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/73"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 107.28809356689453,
+            "t": 710.7347869873047,
+            "r": 286.51141357421875,
+            "b": 532.4485473632812,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/73"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/8",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/74"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 11,
+          "bbox": {
+            "l": 321.99102783203125,
+            "t": 710.9192428588867,
+            "r": 501.8480529785156,
+            "b": 531.9918518066406,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/74"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    },
+    {
+      "self_ref": "#/pictures/9",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [
+        {
+          "$ref": "#/texts/82"
+        }
+      ],
+      "content_layer": "body",
+      "label": "picture",
+      "prov": [
+        {
+          "page_no": 12,
+          "bbox": {
+            "l": 129.57261657714844,
+            "t": 591.3814086914062,
+            "r": 478.9143981933594,
+            "b": 273.3984375,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [
+        {
+          "$ref": "#/texts/82"
+        }
+      ],
+      "references": [],
+      "footnotes": [],
+      "annotations": []
+    }
+  ],
+  "tables": [
+    {
+      "self_ref": "#/tables/0",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 4,
+          "bbox": {
+            "l": 107.4181900024414,
+            "t": 316.2245788574219,
+            "r": 501.95391845703125,
+            "b": 270.41937255859375,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 113.978,
+              "t": 481.7653474,
+              "r": 143.8558374,
+              "b": 490.31722560707965,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Dataset",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 244.737125,
+              "t": 481.44654419999995,
+              "r": 362.16229999999996,
+              "b": 490.31722560707965,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "Overall Per Image pass rate \u2191",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 375.49,
+              "t": 481.44654419999995,
+              "r": 466.7973,
+              "b": 490.31722560707965,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Per Product pass rate \u2191",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 113.978,
+              "t": 497.92934740000004,
+              "r": 179.55183320000003,
+              "b": 506.4812256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Furniture (Ours)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 243.98699999999997,
+              "t": 497.54080600000003,
+              "r": 276.36544999999995,
+              "b": 506.49718340000004,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "17.40%",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 375.14462899999995,
+              "t": 497.54080600000003,
+              "r": 402.5417789999999,
+              "b": 506.49718340000004,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "45.5%",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 113.97799999999998,
+              "t": 508.88834740000004,
+              "r": 211.65133040000006,
+              "b": 517.4402256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Furniture (DreamBooth)",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 243.98993000000007,
+              "t": 508.88834740000004,
+              "r": 274.70462580000003,
+              "b": 517.4402256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "10.00%",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 375.48628740000004,
+              "t": 508.88834740000004,
+              "r": 406.20098319999994,
+              "b": 517.4402256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "24.00%",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 3,
+        "num_cols": 3,
+        "orientation": "rot_0",
+        "grid": [
+          [
+            {
+              "bbox": {
+                "l": 113.978,
+                "t": 481.7653474,
+                "r": 143.8558374,
+                "b": 490.31722560707965,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Dataset",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 244.737125,
+                "t": 481.44654419999995,
+                "r": 362.16229999999996,
+                "b": 490.31722560707965,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "Overall Per Image pass rate \u2191",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 375.49,
+                "t": 481.44654419999995,
+                "r": 466.7973,
+                "b": 490.31722560707965,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Per Product pass rate \u2191",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 113.978,
+                "t": 497.92934740000004,
+                "r": 179.55183320000003,
+                "b": 506.4812256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Furniture (Ours)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 243.98699999999997,
+                "t": 497.54080600000003,
+                "r": 276.36544999999995,
+                "b": 506.49718340000004,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "17.40%",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 375.14462899999995,
+                "t": 497.54080600000003,
+                "r": 402.5417789999999,
+                "b": 506.49718340000004,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "45.5%",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 113.97799999999998,
+                "t": 508.88834740000004,
+                "r": 211.65133040000006,
+                "b": 517.4402256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Furniture (DreamBooth)",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 243.98993000000007,
+                "t": 508.88834740000004,
+                "r": 274.70462580000003,
+                "b": 517.4402256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "10.00%",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 375.48628740000004,
+                "t": 508.88834740000004,
+                "r": 406.20098319999994,
+                "b": 517.4402256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "24.00%",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    },
+    {
+      "self_ref": "#/tables/1",
+      "parent": {
+        "$ref": "#/body"
+      },
+      "children": [],
+      "content_layer": "body",
+      "label": "table",
+      "prov": [
+        {
+          "page_no": 5,
+          "bbox": {
+            "l": 115.91908264160156,
+            "t": 710.7617797851562,
+            "r": 495.7389221191406,
+            "b": 621.6293792724609,
+            "coord_origin": "BOTTOMLEFT"
+          },
+          "charspan": [
+            0,
+            0
+          ]
+        }
+      ],
+      "captions": [],
+      "references": [],
+      "footnotes": [],
+      "data": {
+        "table_cells": [
+          {
+            "bbox": {
+              "l": 196.497,
+              "t": 86.75834740000005,
+              "r": 217.52804860000003,
+              "b": 95.3102256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "ABO",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 229.48316860000003,
+              "t": 86.75834740000005,
+              "r": 300.9249732,
+              "b": 95.3102256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "Private Set (Ours)",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 312.88009320000003,
+              "t": 86.75834740000005,
+              "r": 488.7299457999999,
+              "b": 95.3102256070797,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 0,
+            "end_row_offset_idx": 1,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "Private Set (DreamBooth + LoRA Baseline)",
+            "column_header": true,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 123.272,
+              "t": 102.60354419999999,
+              "r": 163.94930000000002,
+              "b": 111.47422560707969,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "CLIP - I \u2191",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 198.29500000000002,
+              "t": 102.92234740000004,
+              "r": 215.72955000000002,
+              "b": 111.47422560707969,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.89",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 256.4865466,
+              "t": 102.92234740000004,
+              "r": 273.92109659999994,
+              "b": 111.47422560707969,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "0.80",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 392.087,
+              "t": 102.53380600000003,
+              "r": 409.52154999999993,
+              "b": 111.49018339999998,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 1,
+            "end_row_offset_idx": 2,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "0.81",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 123.27199999999999,
+              "t": 113.56254419999993,
+              "r": 166.7183,
+              "b": 122.43322560707963,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "CLIP - T \u2191",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 198.295,
+              "t": 113.88134739999998,
+              "r": 215.72955,
+              "b": 122.43322560707963,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.24",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 256.4865466,
+              "t": 113.88134739999998,
+              "r": 273.92109659999994,
+              "b": 122.43322560707963,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "0.20",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 392.087,
+              "t": 113.49280599999997,
+              "r": 409.52154999999993,
+              "b": 122.44918339999992,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 2,
+            "end_row_offset_idx": 3,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "0.25",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 123.27199999999999,
+              "t": 124.52154419999988,
+              "r": 167.25629999999998,
+              "b": 133.39222560707958,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "DINO - I \u2191",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 198.295,
+              "t": 124.84034739999993,
+              "r": 215.72955,
+              "b": 133.39222560707958,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.98",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 256.48699999999997,
+              "t": 124.45180599999992,
+              "r": 273.9215499999999,
+              "b": 133.40818339999987,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "0.94",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 392.087,
+              "t": 124.84034739999993,
+              "r": 409.52154999999993,
+              "b": 133.39222560707958,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 3,
+            "end_row_offset_idx": 4,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "0.92",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 123.27199999999999,
+              "t": 135.48054419999983,
+              "r": 181.2343,
+              "b": 144.35122560707953,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Seg CLIP - I \u2191",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 198.295,
+              "t": 135.79934739999987,
+              "r": 215.72955,
+              "b": 144.35122560707953,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.94",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 256.48699999999997,
+              "t": 135.41080599999987,
+              "r": 273.9215499999999,
+              "b": 144.36718339999982,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "0.90",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 392.087,
+              "t": 135.79934739999987,
+              "r": 409.52154999999993,
+              "b": 144.35122560707953,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 4,
+            "end_row_offset_idx": 5,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "0.88",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 123.27199999999999,
+              "t": 146.43954419999977,
+              "r": 184.0043,
+              "b": 155.31022560707947,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Seg CLIP - T \u2191",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 198.295,
+              "t": 146.75834739999982,
+              "r": 215.72955,
+              "b": 155.31022560707947,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.21",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 256.48699999999997,
+              "t": 146.3698059999998,
+              "r": 273.9215499999999,
+              "b": 155.32618339999976,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "0.24",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 392.087,
+              "t": 146.75834739999982,
+              "r": 409.52154999999993,
+              "b": 155.31022560707947,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 5,
+            "end_row_offset_idx": 6,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "0.22",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 123.27199999999999,
+              "t": 157.39854419999972,
+              "r": 184.54229999999998,
+              "b": 166.26922560707942,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 0,
+            "end_col_offset_idx": 1,
+            "text": "Seg DINO - I \u2191",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 198.295,
+              "t": 157.71734739999977,
+              "r": 215.72955,
+              "b": 166.26922560707942,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 1,
+            "end_col_offset_idx": 2,
+            "text": "0.99",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 256.48699999999997,
+              "t": 157.32880599999976,
+              "r": 273.9215499999999,
+              "b": 166.2851833999997,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 2,
+            "end_col_offset_idx": 3,
+            "text": "0.99",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          },
+          {
+            "bbox": {
+              "l": 392.087,
+              "t": 157.71734739999977,
+              "r": 409.52154999999993,
+              "b": 166.26922560707942,
+              "coord_origin": "TOPLEFT"
+            },
+            "row_span": 1,
+            "col_span": 1,
+            "start_row_offset_idx": 6,
+            "end_row_offset_idx": 7,
+            "start_col_offset_idx": 3,
+            "end_col_offset_idx": 4,
+            "text": "0.98",
+            "column_header": false,
+            "row_header": false,
+            "row_section": false,
+            "fillable": false
+          }
+        ],
+        "num_rows": 7,
+        "num_cols": 4,
+        "orientation": "rot_0",
+        "grid": [
+          [
+            {
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 196.497,
+                "t": 86.75834740000005,
+                "r": 217.52804860000003,
+                "b": 95.3102256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "ABO",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 229.48316860000003,
+                "t": 86.75834740000005,
+                "r": 300.9249732,
+                "b": 95.3102256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "Private Set (Ours)",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 312.88009320000003,
+                "t": 86.75834740000005,
+                "r": 488.7299457999999,
+                "b": 95.3102256070797,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 0,
+              "end_row_offset_idx": 1,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "Private Set (DreamBooth + LoRA Baseline)",
+              "column_header": true,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 123.272,
+                "t": 102.60354419999999,
+                "r": 163.94930000000002,
+                "b": 111.47422560707969,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "CLIP - I \u2191",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 198.29500000000002,
+                "t": 102.92234740000004,
+                "r": 215.72955000000002,
+                "b": 111.47422560707969,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.89",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 256.4865466,
+                "t": 102.92234740000004,
+                "r": 273.92109659999994,
+                "b": 111.47422560707969,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "0.80",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 392.087,
+                "t": 102.53380600000003,
+                "r": 409.52154999999993,
+                "b": 111.49018339999998,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 1,
+              "end_row_offset_idx": 2,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "0.81",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 123.27199999999999,
+                "t": 113.56254419999993,
+                "r": 166.7183,
+                "b": 122.43322560707963,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "CLIP - T \u2191",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 198.295,
+                "t": 113.88134739999998,
+                "r": 215.72955,
+                "b": 122.43322560707963,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.24",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 256.4865466,
+                "t": 113.88134739999998,
+                "r": 273.92109659999994,
+                "b": 122.43322560707963,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "0.20",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 392.087,
+                "t": 113.49280599999997,
+                "r": 409.52154999999993,
+                "b": 122.44918339999992,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 2,
+              "end_row_offset_idx": 3,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "0.25",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 123.27199999999999,
+                "t": 124.52154419999988,
+                "r": 167.25629999999998,
+                "b": 133.39222560707958,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "DINO - I \u2191",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 198.295,
+                "t": 124.84034739999993,
+                "r": 215.72955,
+                "b": 133.39222560707958,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.98",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 256.48699999999997,
+                "t": 124.45180599999992,
+                "r": 273.9215499999999,
+                "b": 133.40818339999987,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "0.94",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 392.087,
+                "t": 124.84034739999993,
+                "r": 409.52154999999993,
+                "b": 133.39222560707958,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 3,
+              "end_row_offset_idx": 4,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "0.92",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 123.27199999999999,
+                "t": 135.48054419999983,
+                "r": 181.2343,
+                "b": 144.35122560707953,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Seg CLIP - I \u2191",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 198.295,
+                "t": 135.79934739999987,
+                "r": 215.72955,
+                "b": 144.35122560707953,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.94",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 256.48699999999997,
+                "t": 135.41080599999987,
+                "r": 273.9215499999999,
+                "b": 144.36718339999982,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "0.90",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 392.087,
+                "t": 135.79934739999987,
+                "r": 409.52154999999993,
+                "b": 144.35122560707953,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 4,
+              "end_row_offset_idx": 5,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "0.88",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 123.27199999999999,
+                "t": 146.43954419999977,
+                "r": 184.0043,
+                "b": 155.31022560707947,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Seg CLIP - T \u2191",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 198.295,
+                "t": 146.75834739999982,
+                "r": 215.72955,
+                "b": 155.31022560707947,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.21",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 256.48699999999997,
+                "t": 146.3698059999998,
+                "r": 273.9215499999999,
+                "b": 155.32618339999976,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "0.24",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 392.087,
+                "t": 146.75834739999982,
+                "r": 409.52154999999993,
+                "b": 155.31022560707947,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 5,
+              "end_row_offset_idx": 6,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "0.22",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ],
+          [
+            {
+              "bbox": {
+                "l": 123.27199999999999,
+                "t": 157.39854419999972,
+                "r": 184.54229999999998,
+                "b": 166.26922560707942,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 0,
+              "end_col_offset_idx": 1,
+              "text": "Seg DINO - I \u2191",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 198.295,
+                "t": 157.71734739999977,
+                "r": 215.72955,
+                "b": 166.26922560707942,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 1,
+              "end_col_offset_idx": 2,
+              "text": "0.99",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 256.48699999999997,
+                "t": 157.32880599999976,
+                "r": 273.9215499999999,
+                "b": 166.2851833999997,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 2,
+              "end_col_offset_idx": 3,
+              "text": "0.99",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            },
+            {
+              "bbox": {
+                "l": 392.087,
+                "t": 157.71734739999977,
+                "r": 409.52154999999993,
+                "b": 166.26922560707942,
+                "coord_origin": "TOPLEFT"
+              },
+              "row_span": 1,
+              "col_span": 1,
+              "start_row_offset_idx": 6,
+              "end_row_offset_idx": 7,
+              "start_col_offset_idx": 3,
+              "end_col_offset_idx": 4,
+              "text": "0.98",
+              "column_header": false,
+              "row_header": false,
+              "row_section": false,
+              "fillable": false
+            }
+          ]
+        ]
+      },
+      "annotations": []
+    }
+  ],
+  "key_value_items": [],
+  "form_items": [],
+  "pages": {
+    "1": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 1
+    },
+    "2": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 2
+    },
+    "3": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 3
+    },
+    "4": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 4
+    },
+    "5": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 5
+    },
+    "6": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 6
+    },
+    "7": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 7
+    },
+    "8": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 8
+    },
+    "9": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 9
+    },
+    "10": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 10
+    },
+    "11": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 11
+    },
+    "12": {
+      "size": {
+        "width": 612.0,
+        "height": 792.0
+      },
+      "page_no": 12
+    }
+  }
+}

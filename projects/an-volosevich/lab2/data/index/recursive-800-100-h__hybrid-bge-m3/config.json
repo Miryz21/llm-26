@@ -1,0 +1,16 @@
+{
+  "settings": {
+    "chunks": "recursive-800-100-h",
+    "vectors": "hybrid",
+    "model": "BAAI/bge-m3",
+    "max_length": 1024,
+    "batch_size": 16
+  },
+  "stats": {
+    "chunks": 63,
+    "longest_input_tokens": 771,
+    "seconds": 0.8,
+    "dense_dim": 1024,
+    "sparse_terms_mean": 257
+  }
+}

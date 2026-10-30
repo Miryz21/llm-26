@@ -1,4 +1,4 @@
-# Whitelist: in lab2/ only code, docs, the dependency list and the evaluation questions are tracked.
+# Whitelist: in lab2/ only code, docs, the dependency list, the evaluation questions and pipeline outputs are tracked.
 *
 !*/
 !*.py
@@ -7,5 +7,13 @@
 !requirements.txt
 !/questions.json
 
-# Pipeline data is always produced by the scripts, never committed (even its .md files).
-/data/
+# Pipeline outputs are tracked, except the papers' text: Direct3D (2405.14832) and ViewCrafter (2409.02048)
+# may only be distributed by arXiv. The pipeline rebuilds everything left out here.
+!/data/**
+/data/pdf/
+/data/markdown/2405.14832v2.md
+/data/markdown/2409.02048v1.md
+/data/docling/2405.14832v2.json
+/data/docling/2409.02048v1.json
+/data/chunks/
+
