@@ -1,0 +1,11 @@
+# Whitelist: in lab2/ only code, docs, the dependency list and the evaluation questions are tracked.
+*
+!*/
+!*.py
+!*.md
+!.gitignore
+!requirements.txt
+!/questions.json
+
+# Pipeline data is always produced by the scripts, never committed (even its .md files).
+/data/
